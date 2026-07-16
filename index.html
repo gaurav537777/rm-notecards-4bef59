@@ -29,23 +29,6 @@
   /* ---- top edge ---- */
   .topline{height:3px;background:linear-gradient(90deg,#8a6c07,#e6d391,#8a6c07)}
 
-  /* ---- Hero ---- */
-  .hero{max-width:860px;margin:0 auto;text-align:center;padding:72px 24px 26px;animation:rise .9s ease both}
-  @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
-  @media(prefers-reduced-motion:reduce){.hero{animation:none}}
-  .eyebrow{text-transform:uppercase;letter-spacing:.42em;font-size:11px;font-weight:500;color:var(--foil);padding-left:.42em}
-  .hero h1{font-family:var(--serif);font-weight:500;font-size:clamp(44px,9vw,76px);color:#2e2817;line-height:1.05;margin-top:22px;letter-spacing:.02em}
-  .hero h1 .amp{font-family:var(--script);font-weight:400;color:var(--foil);font-size:.92em;padding:0 .06em}
-  .hero .lede{max-width:640px;margin:22px auto 0;color:var(--muted);font-size:15.5px}
-  .hero .lede b{color:var(--body);font-weight:500}
-
-  /* proof index */
-  .proofindex{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:34px}
-  .pi{display:inline-flex;align-items:center;gap:9px;border:1px solid var(--line);background:#fffdf9;border-radius:999px;padding:8px 16px;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--body);text-decoration:none;transition:border-color .25s ease, transform .25s ease}
-  .pi:hover{border-color:#cdb98f;transform:translateY(-1px)}
-  .pi i{width:13px;height:13px;border-radius:50%;border:1px solid rgba(0,0,0,.14)}
-  .pi b{font-weight:600;color:#9a8a67;margin-right:2px}
-
   main{max-width:1060px;margin:0 auto;padding:24px 24px 60px}
 
   /* ---- Proof sections ---- */
@@ -107,21 +90,6 @@
 <body>
 
 <div class="topline"></div>
-
-<div class="hero">
-  <div class="eyebrow">Private Stationery · Second Edition</div>
-  <h1>Ruchi <span class="amp">&amp;</span> Mridul</h1>
-  <p class="lede">Seven notecard proofs. The first three keep your <b>original blush-and-gold palette</b>; four new colourways follow — and every proof holds <b>one consistent theme</b> from notecard to tag: its own palette, its own type, its own finish. Each proof shows the 4&thinsp;×&thinsp;6 notecard and its 2&thinsp;×&thinsp;3 companion tag.</p>
-  <nav class="proofindex" aria-label="Proofs">
-    <a class="pi" href="#p1"><i style="background:#fee2cc"></i><b>I</b> Heirloom</a>
-    <a class="pi" href="#p2"><i style="background:linear-gradient(135deg,#ffebda 50%,#c9ab52 50%)"></i><b>II</b> Signature</a>
-    <a class="pi" href="#p3"><i style="background:linear-gradient(135deg,#fffdfa 50%,#715810 50%)"></i><b>III</b> Editorial</a>
-    <a class="pi" href="#p4"><i style="background:#c8dac2"></i><b>IV</b> Sage</a>
-    <a class="pi" href="#p5"><i style="background:#c2d2e6"></i><b>V</b> Porcelain</a>
-    <a class="pi" href="#p6"><i style="background:#5c2b2e"></i><b>VI</b> Bordeaux</a>
-    <a class="pi" href="#p7"><i style="background:#16202e"></i><b>VII</b> Midnight</a>
-  </nav>
-</div>
 
 <main>
 
