@@ -5,671 +5,585 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
 <title>Ruchi &amp; Mridul — Notecard Proofs</title>
-<meta name="description" content="Private stationery proofs — seven redesigned notecard suites for Ruchi &amp; Mridul.">
+<meta name="description" content="Private stationery proofs for Ruchi &amp; Mridul.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Pinyon+Script&family=Italiana&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Ephesis&family=Imperial+Script&family=Style+Script&family=WindSong:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Cinzel:wght@400;500;600&family=Marcellus&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23fff2ea'/%3E%3Crect x='10' y='10' width='12' height='12' transform='rotate(45 16 16)' fill='%23b08d2e'/%3E%3C/svg%3E">
 <style>
   :root{
-    --peach-deep:#fee2cc; --peach:#ffebda; --peach-pale:#fff2ea; --ivory:#fffdfa;
-    --ink:#715810; --foil:#876a01; --foil-hi:#d9bc66;
-    --charcoal:#0c0b0a; --paper-bg:#f8efe4; --body:#4a4133; --muted:#8a7c62;
-    --line:#eadfcd;
+    --paper-bg:#f6f1e8; --body:#4a4133; --muted:#8a7c62; --line:#e6ddcd;
+    --foil:#876a01; --foil-hi:#d9bc66;
     --serif:'Cormorant Garamond',Georgia,serif;
-    --script:'Pinyon Script',cursive;
-    --display:'Italiana',serif;
     --sans:'Jost',-apple-system,'Segoe UI',sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{background:var(--paper-bg);color:var(--body);font-family:var(--sans);font-weight:400;line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
-  img{max-width:100%;display:block}
-
-  /* ---- top edge ---- */
+  body{background:var(--paper-bg);color:var(--body);font-family:var(--sans);font-weight:300;line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
   .topline{height:3px;background:linear-gradient(90deg,#8a6c07,#e6d391,#8a6c07)}
+  main{max-width:1080px;margin:0 auto;padding:20px 24px 40px}
 
-  main{max-width:1060px;margin:0 auto;padding:24px 24px 60px}
+  /* theme header */
+  .theme{padding:52px 0 10px;border-top:1px solid var(--line)}
+  .theme:first-of-type{border-top:none;padding-top:30px}
+  .thead{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+  .tnum{font-family:var(--serif);font-style:italic;font-size:15px;letter-spacing:.3em;text-transform:uppercase;color:var(--foil)}
+  .theme h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,5vw,44px);color:#2e2817;line-height:1.05}
+  .tdesc{max-width:660px;color:var(--muted);font-size:15px;margin:8px 0 4px}
+  .chips{display:flex;gap:7px;align-items:center;margin:14px 0 0}
+  .chips i{width:17px;height:17px;border-radius:50%;border:1px solid rgba(0,0,0,.12);display:block}
 
-  /* ---- Proof sections ---- */
-  .proof{padding:58px 0 46px;border-top:1px solid var(--line);scroll-margin-top:20px}
-  .proof:first-of-type{border-top:none}
-  .proofhead{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:8px}
-  .pnum{font-family:var(--serif);font-style:italic;font-size:15px;letter-spacing:.3em;text-transform:uppercase;color:var(--foil);white-space:nowrap}
-  .proof h2{font-family:var(--serif);font-weight:500;font-size:clamp(30px,5vw,42px);color:#2e2817;line-height:1.1}
-  .proof .pdesc{max-width:640px;color:var(--muted);font-size:15px;margin-bottom:30px}
+  /* variant */
+  .variant{padding:34px 0 10px}
+  .vhead{display:flex;align-items:baseline;gap:14px;margin-bottom:16px}
+  .vnum{font-family:var(--serif);font-style:italic;font-size:20px;color:var(--foil-hi)}
+  .vname{font-family:var(--serif);font-size:22px;letter-spacing:.04em;color:#2e2817}
+  .vkind{margin-left:auto;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:#a99;color:#b3a789}
+  .vkind.dim{color:#9a7d2e}
 
-  .prooflay{display:grid;grid-template-columns:1fr 300px;gap:34px;align-items:start}
-  @media(max-width:840px){.prooflay{grid-template-columns:1fr}}
-
-  .cardwrap{position:relative}
-  .card-4x6,.card-2x3{background:#fff;border-radius:3px;overflow:hidden;
-    box-shadow:0 1px 2px rgba(64,48,10,.10),0 8px 22px rgba(64,48,10,.13),0 26px 60px rgba(64,48,10,.14);
-    transition:transform .35s ease, box-shadow .35s ease}
-  .card-4x6:hover,.card-2x3:hover{transform:translateY(-5px);
-    box-shadow:0 2px 3px rgba(64,48,10,.10),0 14px 30px rgba(64,48,10,.16),0 40px 80px rgba(64,48,10,.17)}
-  @media(prefers-reduced-motion:reduce){.card-4x6,.card-2x3{transition:none}.card-4x6:hover,.card-2x3:hover{transform:none}}
+  .lay{display:grid;grid-template-columns:1fr 220px;gap:30px;align-items:start}
+  @media(max-width:820px){.lay{grid-template-columns:1fr}}
+  .card-4x6,.card-2x3{border-radius:3px;overflow:hidden;
+    box-shadow:0 1px 2px rgba(40,30,10,.12),0 8px 22px rgba(40,30,10,.14),0 22px 50px rgba(40,30,10,.12)}
   .card-4x6 svg,.card-2x3 svg{display:block;width:100%;height:auto}
-  .caplabel{margin-top:14px;text-align:center;font-size:10.5px;letter-spacing:.3em;text-transform:uppercase;color:#b3a789}
+  .cap{margin-top:11px;text-align:center;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#b3a789}
+  .side{display:flex;flex-direction:column;gap:12px}
+  @media(max-width:820px){.side .card-2x3{width:170px}}
+  .vnote{font-size:13.5px;color:var(--muted);line-height:1.55;margin-top:2px}
+  .spec{font-size:11px;color:#b3a789;letter-spacing:.02em;margin-top:10px;border-top:1px dashed var(--line);padding-top:9px}
+  .spec b{color:#8a7c62;font-weight:500}
 
-  .sidecol{display:flex;flex-direction:column;gap:26px}
-  .sidecol .card-2x3{width:min(66%,200px);margin:0 auto}
-  @media(max-width:840px){.sidecol{flex-direction:row;align-items:flex-start;gap:22px}.sidecol .card-2x3{width:150px;flex:0 0 auto;margin:0}}
-  @media(max-width:520px){.sidecol{flex-direction:column;align-items:center}.sidecol .card-2x3{margin:0 auto;width:160px}.sidecol .docket{align-self:stretch}}
-  .tagblock{flex:1}
-
-  /* printer's docket */
-  .docket{border:1px solid var(--line);background:#fdf8f0;border-radius:10px;padding:18px 20px;flex:1;min-width:0}
-  .docket h4{font-size:10.5px;letter-spacing:.34em;text-transform:uppercase;color:var(--foil);font-weight:600;margin-bottom:12px}
-  .docket dl{display:grid;grid-template-columns:auto 1fr;gap:7px 16px;font-size:13px}
-  .docket dt{color:#b3a789;text-transform:uppercase;letter-spacing:.14em;font-size:10.5px;padding-top:2px;white-space:nowrap}
-  .docket dd{color:var(--body)}
-  .dchips{display:flex;gap:6px;align-items:center;padding-top:3px}
-  .dchips i{width:16px;height:16px;border-radius:50%;border:1px solid rgba(0,0,0,.12)}
-
-  /* choose band */
-  .choose{margin-top:58px;background:linear-gradient(150deg,#171410,#0c0b0a);border-radius:18px;text-align:center;padding:44px 28px;position:relative;overflow:hidden}
-  .choose::after{content:"";position:absolute;inset:0;border-radius:18px;border:1px solid rgba(185,138,62,.35);pointer-events:none}
-  .choose .lbl{text-transform:uppercase;letter-spacing:.4em;font-size:10.5px;color:var(--foil-hi);padding-left:.4em}
-  .choose p{font-family:var(--serif);font-size:clamp(21px,3.6vw,28px);color:#f4ead6;max-width:640px;margin:14px auto 0;line-height:1.45}
-  .choose p i{color:var(--foil-hi)}
-  .choose small{display:block;margin-top:14px;color:#8a8378;font-size:12.5px}
-
-  /* ---- footer ---- */
-  footer{border-top:1px solid var(--line);padding:44px 24px 40px;text-align:center;margin-top:26px}
-  footer .fmono{font-family:var(--script);font-size:34px;color:var(--ink)}
-  footer .meta{font-size:12px;line-height:1.9;color:#b3a789;max-width:560px;margin:10px auto 0;letter-spacing:.06em}
-
-  /* ---- shared SVG type classes ---- */
-  .t-caps{font-family:var(--serif);font-weight:600}
-  .t-ital{font-family:var(--serif);font-style:italic;font-weight:500}
-  .t-script{font-family:var(--script)}
-  .t-display{font-family:var(--display)}
+  footer{border-top:1px solid var(--line);padding:46px 24px 42px;text-align:center;margin-top:40px}
+  footer .fmono{font-family:'Ephesis',cursive;font-size:44px;color:#715810;line-height:1}
+  footer .meta{font-size:12px;line-height:1.9;color:#b3a789;max-width:560px;margin:8px auto 0;letter-spacing:.06em}
 </style>
 </head>
 <body>
-
 <div class="topline"></div>
+
+<!-- ============ SHARED DEFS (referenced by every card) ============ -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <!-- watercolour displacement -->
+  <filter id="wc" x="-35%" y="-35%" width="170%" height="170%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="41" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="100"/><feGaussianBlur stdDeviation="2.4"/>
+  </filter>
+  <filter id="wcSoft" x="-40%" y="-40%" width="180%" height="180%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.006" numOctaves="2" seed="61" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="70"/><feGaussianBlur stdDeviation="9"/>
+  </filter>
+  <!-- neutral paper grain -->
+  <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7"/>
+    <feColorMatrix type="matrix" values="0 0 0 0 0.4 0 0 0 0 0.34 0 0 0 0 0.24 0 0 0 0.04 0"/></filter>
+  <!-- RAISED metallic relief, light upper-left -->
+  <filter id="reliefUL" x="-25%" y="-25%" width="150%" height="150%">
+    <feDropShadow dx="0" dy="6" stdDeviation="9" flood-color="#2e2410" flood-opacity="0.45"/>
+    <feGaussianBlur in="SourceAlpha" stdDeviation="4" result="b"/>
+    <feSpecularLighting in="b" surfaceScale="9" specularConstant="0.95" specularExponent="19" lighting-color="#ffffff" result="s">
+      <feDistantLight azimuth="235" elevation="60"/></feSpecularLighting>
+    <feComposite in="s" in2="SourceAlpha" operator="in" result="sc"/>
+    <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="sc"/></feMerge>
+  </filter>
+  <!-- CARVED / blind deboss, light upper-left -->
+  <filter id="debossUL" x="-25%" y="-25%" width="150%" height="150%">
+    <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="b"/>
+    <feSpecularLighting in="b" surfaceScale="-7" specularConstant="0.8" specularExponent="16" lighting-color="#ffffff" result="s">
+      <feDistantLight azimuth="235" elevation="55"/></feSpecularLighting>
+    <feComposite in="s" in2="SourceAlpha" operator="in" result="sc"/>
+    <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="sc"/></feMerge>
+  </filter>
+  <!-- gold gradients -->
+  <linearGradient id="goldFoil" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#6e4f1a"/><stop offset=".22" stop-color="#b8860b"/><stop offset=".42" stop-color="#e6c15c"/>
+    <stop offset=".5" stop-color="#fff6d5"/><stop offset=".6" stop-color="#e6c15c"/><stop offset=".82" stop-color="#b8860b"/><stop offset="1" stop-color="#4d3611"/>
+  </linearGradient>
+  <linearGradient id="goldFace" x1="0" y1="0" x2="0.35" y2="1">
+    <stop offset="0" stop-color="#fff3c8"/><stop offset=".32" stop-color="#e6c15c"/><stop offset=".58" stop-color="#c99a2e"/><stop offset="1" stop-color="#9a7420"/>
+  </linearGradient>
+  <linearGradient id="champagne" x1="0" y1="0" x2="0.4" y2="1">
+    <stop offset="0" stop-color="#fbeebf"/><stop offset=".35" stop-color="#e8cf8f"/><stop offset=".6" stop-color="#cbab5f"/><stop offset="1" stop-color="#a9863e"/>
+  </linearGradient>
+  <linearGradient id="champFoil" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#8a6c2a"/><stop offset=".25" stop-color="#cbab5f"/><stop offset=".45" stop-color="#f0dca0"/>
+    <stop offset=".5" stop-color="#fdf6dc"/><stop offset=".6" stop-color="#f0dca0"/><stop offset=".8" stop-color="#cbab5f"/><stop offset="1" stop-color="#6f541f"/>
+  </linearGradient>
+</defs></svg>
 
 <main>
 
-  <!-- ============ PROOF I — THE HEIRLOOM ============ -->
-  <section class="proof" id="p1">
-    <div class="proofhead"><span class="pnum">Proof I</span><h2>The Heirloom</h2></div>
-    <p class="pdesc">Your palette, the classical way. A double hairline of foil gold frames the sheet; the names sit engraved along the foot in spaced Cormorant capitals, joined by a copperplate ampersand. Watercolour is kept to two quiet corners so the writing field stays clean.</p>
-    <div class="prooflay">
-      <div class="cardwrap">
-        <div class="card-4x6">
-        <svg viewBox="0 0 1800 1200" role="img" aria-label="Heirloom 4 by 6 notecard">
-          <defs>
-            <linearGradient id="p1-foil" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#8a6c07"/><stop offset=".45" stop-color="#c9ab52"/>
-              <stop offset=".55" stop-color="#e6d391"/><stop offset="1" stop-color="#8a6c07"/>
-            </linearGradient>
-            <filter id="p1-wc" x="-40%" y="-40%" width="180%" height="180%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="11" result="n"/>
-              <feDisplacementMap in="SourceGraphic" in2="n" scale="110"/>
-              <feGaussianBlur stdDeviation="2.2"/>
-            </filter>
-            <filter id="p1-grain"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="3"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 0.55  0 0 0 0 0.45  0 0 0 0 0.30  0 0 0 0.05 0"/></filter>
-          </defs>
-          <rect width="1800" height="1200" fill="#fffdfa"/>
-          <g filter="url(#p1-wc)">
-            <ellipse cx="120" cy="90" rx="420" ry="260" fill="#ffebda" opacity=".95"/>
-            <ellipse cx="270" cy="40" rx="300" ry="180" fill="#fee2cc" opacity=".8"/>
-            <ellipse cx="20" cy="230" rx="260" ry="200" fill="#fff2ea"/>
-            <ellipse cx="1690" cy="1130" rx="430" ry="250" fill="#ffebda" opacity=".95"/>
-            <ellipse cx="1560" cy="1180" rx="300" ry="170" fill="#fee2cc" opacity=".8"/>
-            <ellipse cx="1780" cy="990" rx="240" ry="190" fill="#fff2ea"/>
-          </g>
-          <rect width="1800" height="1200" filter="url(#p1-grain)" opacity=".5"/>
-          <rect x="62" y="62" width="1676" height="1076" fill="none" stroke="url(#p1-foil)" stroke-width="3.5"/>
-          <rect x="86" y="86" width="1628" height="1028" fill="none" stroke="url(#p1-foil)" stroke-width="1.2" opacity=".9"/>
-          <rect x="850" y="76" width="100" height="20" fill="#fffdfa"/>
-          <rect x="893" y="79" width="14" height="14" transform="rotate(45 900 86)" fill="url(#p1-foil)"/>
-          <circle cx="860" cy="86" r="2.6" fill="url(#p1-foil)"/>
-          <circle cx="940" cy="86" r="2.6" fill="url(#p1-foil)"/>
-          <line x1="210" y1="1012" x2="500" y2="1012" stroke="url(#p1-foil)" stroke-width="1.4"/>
-          <line x1="1300" y1="1012" x2="1590" y2="1012" stroke="url(#p1-foil)" stroke-width="1.4"/>
-          <text class="t-caps" x="822" y="1036" text-anchor="end" font-size="64" letter-spacing="19" fill="#715810">RUCHI</text>
-          <text class="t-ital" x="900" y="1036" text-anchor="middle" font-size="78" fill="url(#p1-foil)">&amp;</text>
-          <text class="t-caps" x="980" y="1036" text-anchor="start" font-size="64" letter-spacing="19" fill="#715810">MRIDUL</text>
-        </svg>
+  <!-- =================================================================== -->
+  <!-- ============================ SAGE ================================= -->
+  <!-- =================================================================== -->
+  <section class="theme" id="sage">
+    <div class="thead"><span class="tnum">Colourway I</span><h2>The Sage</h2></div>
+    <p class="tdesc">A botanical colourway — eucalyptus watercolour on warm ivory cotton, forest ink, and a single antique-gold breath. Calm, organic, garden-formal. Four expressions: two flat print proofs, two with the design worked in three dimensions.</p>
+    <div class="chips"><i style="background:#e8efe3"></i><i style="background:#7f9a77"></i><i style="background:#37472e"></i><i style="background:linear-gradient(135deg,#8a7233,#e6d59a)"></i></div>
+
+    <!-- Sage i — Herbarium (flat) -->
+    <div class="variant">
+      <div class="vhead"><span class="vnum">i</span><span class="vname">The Herbarium</span><span class="vkind">flat proof · print-true</span></div>
+      <div class="lay">
+        <div>
+          <div class="card-4x6"><svg viewBox="0 0 1800 1200" role="img" aria-label="Sage Herbarium card">
+            <linearGradient id="s1au" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a7233"/><stop offset=".5" stop-color="#e6d59a"/><stop offset="1" stop-color="#8a7233"/></linearGradient>
+            <rect width="1800" height="1200" fill="#faf8ef"/>
+            <g filter="url(#wc)">
+              <ellipse cx="1670" cy="110" rx="330" ry="200" fill="#e8efe3" opacity=".85"/><ellipse cx="1580" cy="50" rx="220" ry="130" fill="#d6e3d0" opacity=".75"/>
+              <ellipse cx="140" cy="1100" rx="330" ry="190" fill="#e8efe3" opacity=".85"/><ellipse cx="240" cy="1160" rx="210" ry="120" fill="#d6e3d0" opacity=".7"/></g>
+            <rect width="1800" height="1200" filter="url(#grain)" opacity=".4"/>
+            <g stroke="#7f9a77" stroke-width="2.2" fill="none" stroke-linecap="round"><path d="M 740 392 Q 900 330 1060 392"/></g>
+            <g fill="#93ac8b">
+              <ellipse cx="784" cy="372" rx="27" ry="8.5" transform="rotate(-38 784 372)"/><ellipse cx="842" cy="356" rx="30" ry="9.5" transform="rotate(-24 842 356)"/>
+              <ellipse cx="904" cy="348" rx="32" ry="10" transform="rotate(-3 904 348)"/><ellipse cx="966" cy="356" rx="30" ry="9.5" transform="rotate(22 966 356)"/>
+              <ellipse cx="1022" cy="372" rx="27" ry="8.5" transform="rotate(38 1022 372)"/></g>
+            <g fill="#586f52"><ellipse cx="814" cy="360" rx="21" ry="6.5" transform="rotate(-32 814 360)"/><ellipse cx="936" cy="350" rx="22" ry="7" transform="rotate(10 936 350)"/></g>
+            <text x="770" y="660" text-anchor="end" font-family="Corinthia" font-size="228" fill="#37472e">Ruchi</text>
+            <text x="900" y="646" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="128" fill="url(#s1au)">&amp;</text>
+            <text x="1030" y="660" text-anchor="start" font-family="Corinthia" font-size="228" fill="#37472e">Mridul</text>
+            <line x1="812" y1="742" x2="988" y2="742" stroke="#a68d4e" stroke-width="1.3"/>
+            <text x="900" y="806" text-anchor="middle" font-family="EB Garamond" font-size="26" letter-spacing="15" fill="#6b7d63">A&#160;LITTLE&#160;NOTE</text>
+          </svg></div>
+          <div class="cap">Notecard · 4 × 6 in</div>
         </div>
-        <div class="caplabel">Notecard · 4 × 6 in</div>
-      </div>
-      <div class="sidecol">
-        <div class="tagblock">
-          <div class="card-2x3">
-          <svg viewBox="0 0 600 900" role="img" aria-label="Heirloom 2 by 3 tag">
-            <defs>
-              <linearGradient id="p1t-foil" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#8a6c07"/><stop offset=".45" stop-color="#c9ab52"/>
-                <stop offset=".55" stop-color="#e6d391"/><stop offset="1" stop-color="#8a6c07"/>
-              </linearGradient>
-              <filter id="p1t-wc" x="-40%" y="-40%" width="180%" height="180%">
-                <feTurbulence type="fractalNoise" baseFrequency="0.013" numOctaves="3" seed="5" result="n"/>
-                <feDisplacementMap in="SourceGraphic" in2="n" scale="90"/>
-                <feGaussianBlur stdDeviation="2"/>
-              </filter>
-            </defs>
-            <rect width="600" height="900" fill="#fffdfa"/>
-            <g filter="url(#p1t-wc)">
-              <ellipse cx="80" cy="60" rx="260" ry="170" fill="#ffebda" opacity=".95"/>
-              <ellipse cx="170" cy="20" rx="180" ry="110" fill="#fee2cc" opacity=".75"/>
-              <ellipse cx="540" cy="850" rx="250" ry="160" fill="#ffebda" opacity=".95"/>
-              <ellipse cx="460" cy="890" rx="170" ry="100" fill="#fee2cc" opacity=".75"/>
-            </g>
-            <rect x="30" y="30" width="540" height="840" fill="none" stroke="url(#p1t-foil)" stroke-width="2.6"/>
-            <rect x="46" y="46" width="508" height="808" fill="none" stroke="url(#p1t-foil)" stroke-width="1" opacity=".9"/>
-            <text class="t-script" x="300" y="475" text-anchor="middle" font-size="120" fill="#715810">R &amp; M</text>
-            <rect x="293" y="533" width="11" height="11" transform="rotate(45 299 539)" fill="url(#p1t-foil)"/>
-          </svg>
-          </div>
-          <div class="caplabel">Tag · 2 × 3 in</div>
-        </div>
-        <div class="docket">
-          <h4>Printer's Docket</h4>
-          <dl>
-            <dt>Palette</dt><dd><span class="dchips"><i style="background:#fee2cc"></i><i style="background:#715810"></i><i style="background:linear-gradient(135deg,#8a6c07,#e6d391)"></i></span></dd>
-            <dt>Stock</dt><dd>600 gsm cotton, soft ivory</dd>
-            <dt>Type</dt><dd>Cormorant engraved capitals</dd>
-            <dt>Finish</dt><dd>Hot-foil gold frame &amp; ampersand, letterpress olive ink</dd>
-          </dl>
+        <div class="side">
+          <div class="card-2x3"><svg viewBox="0 0 600 900" role="img" aria-label="Sage Herbarium tag">
+            <linearGradient id="s1tau" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a7233"/><stop offset=".5" stop-color="#e6d59a"/><stop offset="1" stop-color="#8a7233"/></linearGradient>
+            <rect width="600" height="900" fill="#faf8ef"/>
+            <g filter="url(#wc)"><ellipse cx="520" cy="80" rx="210" ry="140" fill="#e8efe3" opacity=".85"/><ellipse cx="90" cy="830" rx="200" ry="130" fill="#e8efe3" opacity=".85"/></g>
+            <g stroke="#7f9a77" stroke-width="1.9" fill="none" stroke-linecap="round"><path d="M 224 286 Q 300 250 376 286"/></g>
+            <g fill="#93ac8b"><ellipse cx="252" cy="274" rx="18" ry="6" transform="rotate(-30 252 274)"/><ellipse cx="300" cy="266" rx="19" ry="6.5"/><ellipse cx="348" cy="274" rx="18" ry="6" transform="rotate(30 348 274)"/></g>
+            <text x="252" y="500" text-anchor="end" font-family="Corinthia" font-size="176" fill="#37472e">R</text>
+            <text x="300" y="486" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="82" fill="url(#s1tau)">&amp;</text>
+            <text x="348" y="500" text-anchor="start" font-family="Corinthia" font-size="176" fill="#37472e">M</text>
+            <line x1="250" y1="566" x2="350" y2="566" stroke="#a68d4e" stroke-width="1.1"/>
+            <text x="300" y="612" text-anchor="middle" font-family="EB Garamond" font-size="20" letter-spacing="8" fill="#6b7d63">EST&#160;MMXXVI</text>
+          </svg></div>
+          <div class="cap">Tag · 2 × 3 in</div>
+          <p class="vnote">Corinthia names in forest ink, one antique-gold ampersand, a refined sprig above. Wide margins.</p>
+          <p class="spec"><b>Type</b> Corinthia + EB Garamond italic · <b>Finish</b> Letterpress forest ink, hot-foil ampersand</p>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ============ PROOF II — THE SIGNATURE ============ -->
-  <section class="proof" id="p2">
-    <div class="proofhead"><span class="pnum">Proof II</span><h2>The Signature</h2></div>
-    <p class="pdesc">Your palette, the romantic way. A watercolour dip bleeds off the left edge like a hand-dyed sheet, and the names are written once, large, in foil copperplate — a true calligrapher's hand in place of the old casual script. No frame; the paper is the frame.</p>
-    <div class="prooflay">
-      <div class="cardwrap">
-        <div class="card-4x6">
-        <svg viewBox="0 0 1800 1200" role="img" aria-label="Signature 4 by 6 notecard">
-          <defs>
-            <linearGradient id="p2-foil" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#8a6c07"/><stop offset=".45" stop-color="#c9ab52"/>
-              <stop offset=".55" stop-color="#e6d391"/><stop offset="1" stop-color="#8a6c07"/>
-            </linearGradient>
-            <filter id="p2-wc" x="-40%" y="-40%" width="180%" height="180%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.009" numOctaves="3" seed="21" result="n"/>
-              <feDisplacementMap in="SourceGraphic" in2="n" scale="130"/>
-              <feGaussianBlur stdDeviation="2.4"/>
-            </filter>
-            <filter id="p2-grain"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="9"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 0.55  0 0 0 0 0.45  0 0 0 0 0.30  0 0 0 0.05 0"/></filter>
-          </defs>
-          <rect width="1800" height="1200" fill="#fffdfa"/>
-          <g filter="url(#p2-wc)">
-            <ellipse cx="60" cy="600" rx="360" ry="720" fill="#fff2ea"/>
-            <ellipse cx="10" cy="380" rx="330" ry="520" fill="#ffebda" opacity=".95"/>
-            <ellipse cx="-40" cy="820" rx="310" ry="480" fill="#fee2cc" opacity=".9"/>
-            <ellipse cx="120" cy="1080" rx="260" ry="260" fill="#ffebda" opacity=".8"/>
-            <ellipse cx="90" cy="120" rx="240" ry="240" fill="#fee2cc" opacity=".55"/>
-          </g>
-          <rect width="1800" height="1200" filter="url(#p2-grain)" opacity=".5"/>
-          <text class="t-script" x="1080" y="640" text-anchor="middle" font-size="150" fill="url(#p2-foil)">Ruchi &amp; Mridul</text>
-          <path d="M 640 724 C 900 762, 1320 700, 1512 736" fill="none" stroke="url(#p2-foil)" stroke-width="2.6" stroke-linecap="round"/>
-          <circle cx="1524" cy="737" r="4" fill="url(#p2-foil)"/>
-        </svg>
+    <!-- Sage ii — Eucalyptus Editorial (flat) -->
+    <div class="variant">
+      <div class="vhead"><span class="vnum">ii</span><span class="vname">Eucalyptus Editorial</span><span class="vkind">flat proof · free-flowing</span></div>
+      <div class="lay">
+        <div>
+          <div class="card-4x6"><svg viewBox="0 0 1800 1200" role="img" aria-label="Sage Editorial card">
+            <rect width="1800" height="1200" fill="#faf8ef"/>
+            <g filter="url(#wc)">
+              <ellipse cx="110" cy="660" rx="340" ry="520" fill="#e8efe3" opacity=".8"/><ellipse cx="50" cy="990" rx="290" ry="330" fill="#d6e3d0" opacity=".62"/>
+              <ellipse cx="220" cy="300" rx="210" ry="250" fill="#e8efe3" opacity=".5"/></g>
+            <rect width="1800" height="1200" filter="url(#grain)" opacity=".4"/>
+            <g stroke="#7f9a77" stroke-width="2.6" fill="none" stroke-linecap="round"><path d="M 250 1120 C 300 900 250 700 330 470 C 360 380 340 300 300 210"/></g>
+            <g fill="#93ac8b">
+              <ellipse cx="292" cy="1010" rx="34" ry="12" transform="rotate(58 292 1010)"/><ellipse cx="268" cy="900" rx="36" ry="13" transform="rotate(-52 268 900)"/>
+              <ellipse cx="300" cy="800" rx="34" ry="12" transform="rotate(64 300 800)"/><ellipse cx="268" cy="690" rx="36" ry="13" transform="rotate(-48 268 690)"/>
+              <ellipse cx="330" cy="580" rx="33" ry="12" transform="rotate(60 330 580)"/><ellipse cx="316" cy="460" rx="32" ry="11" transform="rotate(-44 316 460)"/>
+              <ellipse cx="326" cy="350" rx="30" ry="10" transform="rotate(58 326 350)"/><ellipse cx="300" cy="250" rx="28" ry="10" transform="rotate(-40 300 250)"/></g>
+            <g fill="#586f52"><ellipse cx="240" cy="955" rx="26" ry="9" transform="rotate(-40 240 955)"/><ellipse cx="316" cy="745" rx="26" ry="9" transform="rotate(52 316 745)"/><ellipse cx="292" cy="520" rx="24" ry="8" transform="rotate(-36 292 520)"/></g>
+            <text x="1580" y="560" text-anchor="end" font-family="Ephesis" font-size="188" fill="#37472e">Ruchi</text>
+            <text x="1580" y="742" text-anchor="end" font-family="Ephesis" font-size="188" fill="#37472e"><tspan font-family="Cormorant Garamond" font-style="italic" font-size="150" fill="#7f9a77">&amp; </tspan>Mridul</text>
+            <line x1="1140" y1="838" x2="1580" y2="838" stroke="#7f9a77" stroke-width="1.3"/>
+            <text x="1580" y="902" text-anchor="end" font-family="EB Garamond" font-size="26" letter-spacing="12" fill="#6b7d63">WITH&#160;LOVE</text>
+            <text x="150" y="640" text-anchor="middle" font-family="Jost" font-weight="400" font-size="25" letter-spacing="20" fill="#8ba084" transform="rotate(-90 150 640)">EUCALYPTUS</text>
+          </svg></div>
+          <div class="cap">Notecard · 4 × 6 in</div>
         </div>
-        <div class="caplabel">Notecard · 4 × 6 in</div>
-      </div>
-      <div class="sidecol">
-        <div class="tagblock">
-          <div class="card-2x3">
-          <svg viewBox="0 0 600 900" role="img" aria-label="Signature 2 by 3 tag">
-            <defs>
-              <filter id="p2t-wc" x="-40%" y="-40%" width="180%" height="180%">
-                <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="3" seed="14" result="n"/>
-                <feDisplacementMap in="SourceGraphic" in2="n" scale="100"/>
-                <feGaussianBlur stdDeviation="2.4"/>
-              </filter>
-            </defs>
-            <rect width="600" height="900" fill="#ffebda"/>
-            <g filter="url(#p2t-wc)">
-              <ellipse cx="300" cy="1010" rx="480" ry="420" fill="#fee2cc" opacity=".9"/>
-              <ellipse cx="150" cy="-60" rx="380" ry="300" fill="#fffdfa" opacity=".92"/>
-              <ellipse cx="520" cy="140" rx="240" ry="220" fill="#fff2ea" opacity=".8"/>
-            </g>
-            <text class="t-script" x="300" y="360" text-anchor="middle" font-size="96" fill="#715810">Ruchi</text>
-            <text class="t-script" x="300" y="482" text-anchor="middle" font-size="66" fill="#715810" opacity=".85">&amp;</text>
-            <text class="t-script" x="300" y="620" text-anchor="middle" font-size="96" fill="#715810">Mridul</text>
-          </svg>
-          </div>
-          <div class="caplabel">Tag · 2 × 3 in</div>
-        </div>
-        <div class="docket">
-          <h4>Printer's Docket</h4>
-          <dl>
-            <dt>Palette</dt><dd><span class="dchips"><i style="background:#fee2cc"></i><i style="background:#fffdfa"></i><i style="background:linear-gradient(135deg,#8a6c07,#e6d391)"></i></span></dd>
-            <dt>Stock</dt><dd>450 gsm cotton, deckle edge optional</dd>
-            <dt>Type</dt><dd>Pinyon copperplate script</dd>
-            <dt>Finish</dt><dd>Hot-foil gold names, watercolour printed edge-to-edge</dd>
-          </dl>
+        <div class="side">
+          <div class="card-2x3"><svg viewBox="0 0 600 900" role="img" aria-label="Sage Editorial tag">
+            <rect width="600" height="900" fill="#faf8ef"/>
+            <g filter="url(#wc)"><ellipse cx="90" cy="470" rx="200" ry="360" fill="#e8efe3" opacity=".75"/></g>
+            <g stroke="#7f9a77" stroke-width="2.2" fill="none" stroke-linecap="round"><path d="M 150 820 C 180 640 150 470 200 300"/></g>
+            <g fill="#93ac8b"><ellipse cx="176" cy="720" rx="24" ry="9" transform="rotate(56 176 720)"/><ellipse cx="158" cy="600" rx="25" ry="9" transform="rotate(-50 158 600)"/><ellipse cx="190" cy="470" rx="23" ry="8" transform="rotate(58 190 470)"/><ellipse cx="184" cy="360" rx="21" ry="8" transform="rotate(-44 184 360)"/></g>
+            <text x="470" y="472" text-anchor="end" font-family="Ephesis" font-size="150" fill="#37472e">R</text>
+            <text x="470" y="624" text-anchor="end" font-family="Ephesis" font-size="150" fill="#37472e"><tspan font-family="Cormorant Garamond" font-style="italic" font-size="116" fill="#7f9a77">&amp;</tspan>M</text>
+          </svg></div>
+          <div class="cap">Tag · 2 × 3 in</div>
+          <p class="vnote">Asymmetric and modern. A branch sweeps up the left; names sit high-right in Ephesis; a clean Jost label anchors the edge.</p>
+          <p class="spec"><b>Type</b> Ephesis + Jost · <b>Finish</b> Letterpress forest ink, blind-deboss branch</p>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ============ PROOF III — THE EDITORIAL ============ -->
-  <section class="proof" id="p3">
-    <div class="proofhead"><span class="pnum">Proof III</span><h2>The Editorial</h2></div>
-    <p class="pdesc">Your palette, the modern way. Hairline capitals stacked like a fashion masthead, a single foil ampersand drawn between them, and one watercolour bloom breaking the right edge. Corner ticks stand in for a frame — quiet, current, unmistakably yours.</p>
-    <div class="prooflay">
-      <div class="cardwrap">
-        <div class="card-4x6">
-        <svg viewBox="0 0 1800 1200" role="img" aria-label="Editorial 4 by 6 notecard">
-          <defs>
-            <linearGradient id="p3-foil" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#8a6c07"/><stop offset=".45" stop-color="#c9ab52"/>
-              <stop offset=".55" stop-color="#e6d391"/><stop offset="1" stop-color="#8a6c07"/>
-            </linearGradient>
-            <filter id="p3-wc" x="-40%" y="-40%" width="180%" height="180%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" seed="31" result="n"/>
-              <feDisplacementMap in="SourceGraphic" in2="n" scale="120"/>
-              <feGaussianBlur stdDeviation="2.2"/>
-            </filter>
-            <filter id="p3-grain"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="17"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 0.55  0 0 0 0 0.45  0 0 0 0 0.30  0 0 0 0.05 0"/></filter>
-          </defs>
-          <rect width="1800" height="1200" fill="#fffdfa"/>
-          <g filter="url(#p3-wc)">
-            <ellipse cx="1810" cy="560" rx="420" ry="500" fill="#fff2ea"/>
-            <ellipse cx="1860" cy="430" rx="340" ry="360" fill="#ffebda" opacity=".95"/>
-            <ellipse cx="1830" cy="740" rx="300" ry="330" fill="#fee2cc" opacity=".9"/>
-          </g>
-          <rect width="1800" height="1200" filter="url(#p3-grain)" opacity=".5"/>
-          <path d="M 70 160 V 70 H 160" fill="none" stroke="url(#p3-foil)" stroke-width="3"/>
-          <path d="M 1640 70 H 1730 V 160" fill="none" stroke="url(#p3-foil)" stroke-width="3"/>
-          <path d="M 1730 1040 V 1130 H 1640" fill="none" stroke="url(#p3-foil)" stroke-width="3"/>
-          <path d="M 160 1130 H 70 V 1040" fill="none" stroke="url(#p3-foil)" stroke-width="3"/>
-          <text class="t-display" x="150" y="540" font-size="170" letter-spacing="34" fill="#715810">RUCHI</text>
-          <text class="t-ital" x="160" y="756" font-size="200" fill="url(#p3-foil)">&amp;</text>
-          <text class="t-display" x="330" y="932" font-size="170" letter-spacing="34" fill="#715810">MRIDUL</text>
-        </svg>
-        </div>
-        <div class="caplabel">Notecard · 4 × 6 in</div>
-      </div>
-      <div class="sidecol">
-        <div class="tagblock">
-          <div class="card-2x3">
-          <svg viewBox="0 0 600 900" role="img" aria-label="Editorial 2 by 3 tag">
-            <defs>
-              <linearGradient id="p3t-foil" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#8a6c07"/><stop offset=".45" stop-color="#c9ab52"/>
-                <stop offset=".55" stop-color="#e6d391"/><stop offset="1" stop-color="#8a6c07"/>
-              </linearGradient>
-              <filter id="p3t-wc" x="-40%" y="-40%" width="180%" height="180%">
-                <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="3" seed="8" result="n"/>
-                <feDisplacementMap in="SourceGraphic" in2="n" scale="90"/>
-                <feGaussianBlur stdDeviation="2"/>
-              </filter>
-            </defs>
-            <rect width="600" height="900" fill="#fffdfa"/>
-            <g filter="url(#p3t-wc)">
-              <ellipse cx="320" cy="930" rx="380" ry="260" fill="#ffebda" opacity=".95"/>
-              <ellipse cx="440" cy="960" rx="260" ry="180" fill="#fee2cc" opacity=".85"/>
+    <!-- Sage iii — Sculpted Cipher (dimensional) -->
+    <div class="variant">
+      <div class="vhead"><span class="vnum">iii</span><span class="vname">The Sculpted Cipher</span><span class="vkind dim">dimensional · raised foil</span></div>
+      <div class="lay">
+        <div>
+          <div class="card-4x6"><svg viewBox="0 0 1800 1200" role="img" aria-label="Sage sculpted cipher card">
+            <rect width="1800" height="1200" fill="#faf8ef"/>
+            <g filter="url(#wc)"><ellipse cx="1690" cy="90" rx="300" ry="180" fill="#e8efe3" opacity=".7"/><ellipse cx="110" cy="1120" rx="300" ry="170" fill="#e8efe3" opacity=".7"/></g>
+            <rect width="1800" height="1200" filter="url(#grain)" opacity=".4"/>
+            <g filter="url(#reliefUL)">
+              <text x="905" y="700" text-anchor="end" font-family="Corinthia" font-size="500" fill="url(#goldFoil)">R</text>
+              <text x="895" y="700" text-anchor="start" font-family="Corinthia" font-size="500" fill="url(#goldFoil)">M</text>
+              <text x="900" y="670" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="210" fill="url(#goldFoil)">&amp;</text>
             </g>
-            <path d="M 40 110 V 40 H 110" fill="none" stroke="url(#p3t-foil)" stroke-width="2.4"/>
-            <path d="M 490 40 H 560 V 110" fill="none" stroke="url(#p3t-foil)" stroke-width="2.4"/>
-            <path d="M 560 790 V 860 H 490" fill="none" stroke="url(#p3t-foil)" stroke-width="2.4"/>
-            <path d="M 110 860 H 40 V 790" fill="none" stroke="url(#p3t-foil)" stroke-width="2.4"/>
-            <text class="t-display" x="300" y="360" text-anchor="middle" font-size="180" fill="#715810">R</text>
-            <text class="t-ital" x="300" y="520" text-anchor="middle" font-size="120" fill="url(#p3t-foil)">&amp;</text>
-            <text class="t-display" x="300" y="700" text-anchor="middle" font-size="180" fill="#715810">M</text>
-          </svg>
-          </div>
-          <div class="caplabel">Tag · 2 × 3 in</div>
+            <text x="900" y="920" text-anchor="middle" font-family="Cinzel" font-weight="500" font-size="34" letter-spacing="16" fill="#5d6f55">RUCHI &#160;&amp;&#160; MRIDUL</text>
+          </svg></div>
+          <div class="cap">Notecard · 4 × 6 in</div>
         </div>
-        <div class="docket">
-          <h4>Printer's Docket</h4>
-          <dl>
-            <dt>Palette</dt><dd><span class="dchips"><i style="background:#fffdfa"></i><i style="background:#715810"></i><i style="background:linear-gradient(135deg,#8a6c07,#e6d391)"></i></span></dd>
-            <dt>Stock</dt><dd>600 gsm cotton, matte</dd>
-            <dt>Type</dt><dd>Italiana hairline capitals</dd>
-            <dt>Finish</dt><dd>Hot-foil ampersand &amp; corner ticks, olive ink capitals</dd>
-          </dl>
+        <div class="side">
+          <div class="card-2x3"><svg viewBox="0 0 600 900" role="img" aria-label="Sage cipher tag">
+            <rect width="600" height="900" fill="#faf8ef"/>
+            <g filter="url(#wc)"><ellipse cx="510" cy="70" rx="180" ry="120" fill="#e8efe3" opacity=".7"/></g>
+            <g filter="url(#reliefUL)">
+              <text x="300" y="500" text-anchor="end" font-family="Corinthia" font-size="280" fill="url(#goldFoil)">R</text>
+              <text x="300" y="500" text-anchor="start" font-family="Corinthia" font-size="280" fill="url(#goldFoil)">M</text>
+              <text x="300" y="482" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="120" fill="url(#goldFoil)">&amp;</text>
+            </g>
+            <text x="300" y="640" text-anchor="middle" font-family="Cinzel" font-size="22" letter-spacing="10" fill="#5d6f55">R&#160;&amp;&#160;M</text>
+          </svg></div>
+          <div class="cap">Tag · 2 × 3 in</div>
+          <p class="vnote">The R&amp;M cipher raised in gold foil — genuine relief, lit from the upper-left, so the monogram lifts off the stock. The design itself is three-dimensional.</p>
+          <p class="spec"><b>Type</b> Corinthia cipher · <b>Finish</b> Sculpted hot-foil emboss on ivory cotton</p>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ============ PROOF IV — THE SAGE ============ -->
-  <section class="proof" id="p4">
-    <div class="proofhead"><span class="pnum">Proof IV</span><h2>The Sage</h2></div>
-    <p class="pdesc">A botanical colourway. Eucalyptus watercolour in place of blush, a hand-drawn sprig arching over the names, and the names themselves in flowing Cormorant italic — forest ink on ivory. Calm, organic, garden-party formal.</p>
-    <div class="prooflay">
-      <div class="cardwrap">
-        <div class="card-4x6">
-        <svg viewBox="0 0 1800 1200" role="img" aria-label="Sage 4 by 6 notecard">
-          <defs>
-            <filter id="p4-wc" x="-40%" y="-40%" width="180%" height="180%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="41" result="n"/>
-              <feDisplacementMap in="SourceGraphic" in2="n" scale="110"/>
-              <feGaussianBlur stdDeviation="2.2"/>
-            </filter>
-            <filter id="p4-grain"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="23"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 0.35  0 0 0 0 0.45  0 0 0 0 0.32  0 0 0 0.05 0"/></filter>
-          </defs>
-          <rect width="1800" height="1200" fill="#fcfdf9"/>
-          <g filter="url(#p4-wc)">
-            <ellipse cx="1700" cy="110" rx="420" ry="250" fill="#e7efe4" opacity=".95"/>
-            <ellipse cx="1560" cy="40" rx="290" ry="170" fill="#d7e4d2" opacity=".85"/>
-            <ellipse cx="1790" cy="260" rx="240" ry="180" fill="#c8dac2" opacity=".6"/>
-            <ellipse cx="110" cy="1110" rx="430" ry="250" fill="#e7efe4" opacity=".95"/>
-            <ellipse cx="260" cy="1170" rx="290" ry="160" fill="#d7e4d2" opacity=".85"/>
-            <ellipse cx="20" cy="960" rx="230" ry="180" fill="#c8dac2" opacity=".6"/>
-          </g>
-          <rect width="1800" height="1200" filter="url(#p4-grain)" opacity=".5"/>
-          <!-- sprig -->
-          <g stroke="#7d9a76" stroke-width="3" fill="none">
-            <path d="M 700 520 Q 900 452 1100 520"/>
-          </g>
-          <g fill="#9db797">
-            <ellipse cx="742" cy="496" rx="30" ry="10" transform="rotate(-32 742 496)"/>
-            <ellipse cx="796" cy="510" rx="30" ry="10" transform="rotate(38 796 510)"/>
-            <ellipse cx="852" cy="466" rx="30" ry="10" transform="rotate(-22 852 466)"/>
-            <ellipse cx="908" cy="486" rx="30" ry="10" transform="rotate(30 908 486)"/>
-            <ellipse cx="962" cy="460" rx="30" ry="10" transform="rotate(-14 962 460)"/>
-            <ellipse cx="1018" cy="492" rx="30" ry="10" transform="rotate(40 1018 492)"/>
-            <ellipse cx="1064" cy="480" rx="30" ry="10" transform="rotate(-30 1064 480)"/>
-          </g>
-          <g fill="#7d9a76">
-            <ellipse cx="824" cy="482" rx="24" ry="8" transform="rotate(-40 824 482)"/>
-            <ellipse cx="936" cy="470" rx="24" ry="8" transform="rotate(24 936 470)"/>
-            <ellipse cx="1096" cy="508" rx="24" ry="8" transform="rotate(26 1096 508)"/>
-          </g>
-          <text class="t-ital" x="900" y="700" text-anchor="middle" font-size="118" fill="#3e523d" letter-spacing="4">Ruchi &amp; Mridul</text>
-          <line x1="760" y1="768" x2="1040" y2="768" stroke="#7d9a76" stroke-width="1.6"/>
-        </svg>
+    <!-- Sage iv — Pressed Script (dimensional deboss) -->
+    <div class="variant">
+      <div class="vhead"><span class="vnum">iv</span><span class="vname">The Pressed Script</span><span class="vkind dim">dimensional · blind deboss</span></div>
+      <div class="lay">
+        <div>
+          <div class="card-4x6"><svg viewBox="0 0 1800 1200" role="img" aria-label="Sage pressed script card">
+            <rect width="1800" height="1200" fill="#f1eee2"/>
+            <g filter="url(#wc)"><ellipse cx="1680" cy="120" rx="320" ry="190" fill="#e3ebde" opacity=".8"/><ellipse cx="130" cy="1110" rx="320" ry="185" fill="#e3ebde" opacity=".8"/></g>
+            <rect width="1800" height="1200" filter="url(#grain)" opacity=".5"/>
+            <g filter="url(#debossUL)" fill="#e8e4d4">
+              <text x="770" y="660" text-anchor="end" font-family="Corinthia" font-size="228">Ruchi</text>
+              <text x="900" y="646" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="128">&amp;</text>
+              <text x="1030" y="660" text-anchor="start" font-family="Corinthia" font-size="228">Mridul</text>
+            </g>
+            <g filter="url(#debossUL)" fill="#e8e4d4"><path d="M 812 744 L 988 744" stroke="#e8e4d4" stroke-width="4"/></g>
+            <text x="900" y="820" text-anchor="middle" font-family="Cinzel" font-size="27" letter-spacing="15" fill="#b0a892">A&#160;LITTLE&#160;NOTE</text>
+          </svg></div>
+          <div class="cap">Notecard · 4 × 6 in</div>
         </div>
-        <div class="caplabel">Notecard · 4 × 6 in</div>
-      </div>
-      <div class="sidecol">
-        <div class="tagblock">
-          <div class="card-2x3">
-          <svg viewBox="0 0 600 900" role="img" aria-label="Sage 2 by 3 tag">
-            <defs>
-              <filter id="p4t-wc" x="-40%" y="-40%" width="180%" height="180%">
-                <feTurbulence type="fractalNoise" baseFrequency="0.013" numOctaves="3" seed="26" result="n"/>
-                <feDisplacementMap in="SourceGraphic" in2="n" scale="90"/>
-                <feGaussianBlur stdDeviation="2"/>
-              </filter>
-            </defs>
-            <rect width="600" height="900" fill="#fcfdf9"/>
-            <g filter="url(#p4t-wc)">
-              <ellipse cx="520" cy="70" rx="260" ry="170" fill="#e7efe4" opacity=".95"/>
-              <ellipse cx="580" cy="150" rx="180" ry="130" fill="#d7e4d2" opacity=".8"/>
-              <ellipse cx="70" cy="840" rx="250" ry="160" fill="#e7efe4" opacity=".95"/>
-              <ellipse cx="150" cy="890" rx="170" ry="100" fill="#c8dac2" opacity=".7"/>
+        <div class="side">
+          <div class="card-2x3"><svg viewBox="0 0 600 900" role="img" aria-label="Sage pressed tag">
+            <rect width="600" height="900" fill="#f1eee2"/>
+            <g filter="url(#debossUL)" fill="#e8e4d4">
+              <text x="252" y="500" text-anchor="end" font-family="Corinthia" font-size="176">R</text>
+              <text x="300" y="486" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="82">&amp;</text>
+              <text x="348" y="500" text-anchor="start" font-family="Corinthia" font-size="176">M</text>
             </g>
-            <g stroke="#7d9a76" stroke-width="2.4" fill="none">
-              <path d="M 190 330 Q 300 282 410 330"/>
-            </g>
-            <g fill="#9db797">
-              <ellipse cx="224" cy="312" rx="22" ry="8" transform="rotate(-32 224 312)"/>
-              <ellipse cx="272" cy="300" rx="22" ry="8" transform="rotate(30 272 300)"/>
-              <ellipse cx="322" cy="292" rx="22" ry="8" transform="rotate(-18 322 292)"/>
-              <ellipse cx="372" cy="308" rx="22" ry="8" transform="rotate(34 372 308)"/>
-            </g>
-            <text class="t-ital" x="300" y="500" text-anchor="middle" font-size="92" fill="#3e523d">R &amp; M</text>
-            <line x1="240" y1="556" x2="360" y2="556" stroke="#7d9a76" stroke-width="1.4"/>
-          </svg>
-          </div>
-          <div class="caplabel">Tag · 2 × 3 in</div>
-        </div>
-        <div class="docket">
-          <h4>Printer's Docket</h4>
-          <dl>
-            <dt>Palette</dt><dd><span class="dchips"><i style="background:#d7e4d2"></i><i style="background:#7d9a76"></i><i style="background:#3e523d"></i></span></dd>
-            <dt>Stock</dt><dd>600 gsm cotton, warm white</dd>
-            <dt>Type</dt><dd>Cormorant italic</dd>
-            <dt>Finish</dt><dd>Letterpress forest ink, blind-deboss sprig</dd>
-          </dl>
+            <text x="300" y="612" text-anchor="middle" font-family="Cinzel" font-size="19" letter-spacing="8" fill="#b0a892">EST&#160;MMXXVI</text>
+          </svg></div>
+          <div class="cap">Tag · 2 × 3 in</div>
+          <p class="vnote">No ink at all — the names pressed <em>into</em> the cotton and read purely by shadow. The connoisseur's quiet-luxury move: dimensional, tonal, tactile.</p>
+          <p class="spec"><b>Type</b> Corinthia + Cinzel · <b>Finish</b> Blind deboss on 600gsm cotton, no ink</p>
         </div>
       </div>
     </div>
+
   </section>
 
-  <!-- ============ PROOF V — THE PORCELAIN ============ -->
-  <section class="proof" id="p5">
-    <div class="proofhead"><span class="pnum">Proof V</span><h2>The Porcelain</h2></div>
-    <p class="pdesc">Blue-and-white china as stationery. Dusty indigo watercolour, a double painted keyline, and the names in spaced capitals with an italic ampersand — slate ink on porcelain white. Crisp, cool, quietly formal.</p>
-    <div class="prooflay">
-      <div class="cardwrap">
-        <div class="card-4x6">
-        <svg viewBox="0 0 1800 1200" role="img" aria-label="Porcelain 4 by 6 notecard">
-          <defs>
-            <filter id="p5-wc" x="-40%" y="-40%" width="180%" height="180%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.011" numOctaves="3" seed="51" result="n"/>
-              <feDisplacementMap in="SourceGraphic" in2="n" scale="110"/>
-              <feGaussianBlur stdDeviation="2.2"/>
-            </filter>
-            <filter id="p5-grain"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="29"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 0.30  0 0 0 0 0.38  0 0 0 0 0.52  0 0 0 0.04 0"/></filter>
-          </defs>
-          <rect width="1800" height="1200" fill="#fdfeff"/>
-          <g filter="url(#p5-wc)">
-            <ellipse cx="120" cy="100" rx="430" ry="260" fill="#e3ebf5" opacity=".95"/>
-            <ellipse cx="280" cy="30" rx="300" ry="170" fill="#d3dfee" opacity=".85"/>
-            <ellipse cx="10" cy="250" rx="250" ry="200" fill="#c2d2e6" opacity=".6"/>
-            <ellipse cx="1690" cy="1120" rx="430" ry="250" fill="#e3ebf5" opacity=".95"/>
-            <ellipse cx="1540" cy="1180" rx="290" ry="160" fill="#d3dfee" opacity=".85"/>
-            <ellipse cx="1790" cy="970" rx="240" ry="190" fill="#c2d2e6" opacity=".6"/>
-          </g>
-          <rect width="1800" height="1200" filter="url(#p5-grain)" opacity=".5"/>
-          <rect x="62" y="62" width="1676" height="1076" fill="none" stroke="#5a7194" stroke-width="3"/>
-          <rect x="86" y="86" width="1628" height="1028" fill="none" stroke="#8ba0bd" stroke-width="1.2"/>
-          <rect x="850" y="76" width="100" height="20" fill="#fdfeff"/>
-          <circle cx="878" cy="86" r="3" fill="#5a7194"/>
-          <circle cx="900" cy="86" r="4.6" fill="#5a7194"/>
-          <circle cx="922" cy="86" r="3" fill="#5a7194"/>
-          <line x1="210" y1="1012" x2="500" y2="1012" stroke="#8ba0bd" stroke-width="1.4"/>
-          <line x1="1300" y1="1012" x2="1590" y2="1012" stroke="#8ba0bd" stroke-width="1.4"/>
-          <text class="t-caps" x="818" y="1036" text-anchor="end" font-size="64" letter-spacing="19" fill="#33475e">RUCHI</text>
-          <text class="t-ital" x="900" y="1036" text-anchor="middle" font-size="76" fill="#5a7194">&amp;</text>
-          <text class="t-caps" x="984" y="1036" text-anchor="start" font-size="64" letter-spacing="19" fill="#33475e">MRIDUL</text>
-        </svg>
+  <!-- =================================================================== -->
+  <!-- ========================== BORDEAUX =============================== -->
+  <!-- =================================================================== -->
+  <section class="theme" id="bordeaux">
+    <div class="thead"><span class="tnum">Colourway II</span><h2>The Bordeaux</h2></div>
+    <p class="tdesc">The richest of the light cards. Deep wine watercolour pools along cream cotton, held by a single gold rule; couture script and one hot-foil breath. Dinner-party stationery — for notes that arrive like invitations.</p>
+    <div class="chips"><i style="background:#fbf6ee"></i><i style="background:#8a4a4f"></i><i style="background:#5c2b2e"></i><i style="background:linear-gradient(135deg,#8a6c07,#e6d391)"></i></div>
+
+    <!-- Bordeaux i — Correspondence (flat classic) -->
+    <div class="variant">
+      <div class="vhead"><span class="vnum">i</span><span class="vname">The Correspondence</span><span class="vkind">flat proof · print-true</span></div>
+      <div class="lay">
+        <div>
+          <div class="card-4x6"><svg viewBox="0 0 1800 1200" role="img" aria-label="Bordeaux correspondence card">
+            <rect width="1800" height="1200" fill="#fbf6ee"/>
+            <g filter="url(#wcSoft)">
+              <ellipse cx="900" cy="1360" rx="1150" ry="410" fill="#d9b6b8" opacity=".55"/><ellipse cx="620" cy="1400" rx="840" ry="360" fill="#b07a7e" opacity=".6"/>
+              <ellipse cx="1280" cy="1420" rx="800" ry="350" fill="#8a4a4f" opacity=".65"/><ellipse cx="950" cy="1470" rx="940" ry="350" fill="#5c2b2e" opacity=".88"/></g>
+            <rect width="1800" height="1200" filter="url(#grain)" opacity=".4"/>
+            <line x1="150" y1="905" x2="1650" y2="905" stroke="url(#goldFoil)" stroke-width="2.4"/>
+            <text x="770" y="470" text-anchor="end" font-family="Imperial Script" font-size="180" fill="#5c2b2e">Ruchi</text>
+            <text x="900" y="452" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="118" fill="url(#goldFoil)">&amp;</text>
+            <text x="1030" y="470" text-anchor="start" font-family="Imperial Script" font-size="180" fill="#5c2b2e">Mridul</text>
+            <text x="900" y="600" text-anchor="middle" font-family="Cinzel" font-size="27" letter-spacing="16" fill="#8a5a4c">CORRESPONDENCE</text>
+            <rect x="893" y="855" width="14" height="14" transform="rotate(45 900 862)" fill="url(#goldFoil)"/>
+          </svg></div>
+          <div class="cap">Notecard · 4 × 6 in</div>
         </div>
-        <div class="caplabel">Notecard · 4 × 6 in</div>
+        <div class="side">
+          <div class="card-2x3"><svg viewBox="0 0 600 900" role="img" aria-label="Bordeaux tag">
+            <linearGradient id="b1bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6d3438"/><stop offset="1" stop-color="#4c2225"/></linearGradient>
+            <rect width="600" height="900" fill="url(#b1bg)"/>
+            <rect x="30" y="30" width="540" height="840" fill="none" stroke="url(#goldFoil)" stroke-width="2.2"/>
+            <text x="300" y="470" text-anchor="middle" font-family="Imperial Script" font-size="150" fill="#f3e2cf">R&#160;<tspan fill="url(#goldFoil)">&amp;</tspan>&#160;M</text>
+          </svg></div>
+          <div class="cap">Tag · 2 × 3 in</div>
+          <p class="vnote">Names high in Imperial Script wine ink, a gold copperplate ampersand, the wine wash pooled at the foot behind a single hot-foil rule.</p>
+          <p class="spec"><b>Type</b> Imperial Script + Cinzel · <b>Finish</b> Letterpress wine ink, hot-foil rule &amp; ampersand</p>
+        </div>
       </div>
-      <div class="sidecol">
-        <div class="tagblock">
-          <div class="card-2x3">
-          <svg viewBox="0 0 600 900" role="img" aria-label="Porcelain 2 by 3 tag">
-            <defs>
-              <filter id="p5t-wc" x="-40%" y="-40%" width="180%" height="180%">
-                <feTurbulence type="fractalNoise" baseFrequency="0.013" numOctaves="3" seed="33" result="n"/>
-                <feDisplacementMap in="SourceGraphic" in2="n" scale="90"/>
-                <feGaussianBlur stdDeviation="2"/>
-              </filter>
-            </defs>
-            <rect width="600" height="900" fill="#fdfeff"/>
-            <g filter="url(#p5t-wc)">
-              <ellipse cx="90" cy="70" rx="260" ry="170" fill="#e3ebf5" opacity=".95"/>
-              <ellipse cx="180" cy="10" rx="180" ry="110" fill="#d3dfee" opacity=".8"/>
-              <ellipse cx="520" cy="840" rx="250" ry="160" fill="#e3ebf5" opacity=".95"/>
-              <ellipse cx="440" cy="890" rx="170" ry="100" fill="#c2d2e6" opacity=".7"/>
+    </div>
+
+    <!-- Bordeaux ii — Claret Editorial (flat free-flowing) -->
+    <div class="variant">
+      <div class="vhead"><span class="vnum">ii</span><span class="vname">Claret Editorial</span><span class="vkind">flat proof · free-flowing</span></div>
+      <div class="lay">
+        <div>
+          <div class="card-4x6"><svg viewBox="0 0 1800 1200" role="img" aria-label="Bordeaux claret editorial card">
+            <rect width="1800" height="1200" fill="#fbf6ee"/>
+            <g filter="url(#wc)">
+              <ellipse cx="1650" cy="120" rx="520" ry="430" fill="#d9b6b8" opacity=".6"/><ellipse cx="1740" cy="60" rx="380" ry="320" fill="#b07a7e" opacity=".6"/>
+              <ellipse cx="1780" cy="300" rx="300" ry="320" fill="#8a4a4f" opacity=".55"/><ellipse cx="1700" cy="-40" rx="260" ry="240" fill="#5c2b2e" opacity=".7"/></g>
+            <rect width="1800" height="1200" filter="url(#grain)" opacity=".4"/>
+            <text x="230" y="760" text-anchor="start" font-family="Style Script" font-size="176" fill="#5c2b2e">Ruchi</text>
+            <text x="230" y="930" text-anchor="start" font-family="Style Script" font-size="176" fill="#5c2b2e"><tspan font-family="EB Garamond" font-style="italic" fill="#a9793f">&amp; </tspan>Mridul</text>
+            <line x1="240" y1="640" x2="640" y2="640" stroke="url(#goldFoil)" stroke-width="1.6"/>
+            <text x="1650" y="1120" text-anchor="end" font-family="Cinzel" font-size="24" letter-spacing="14" fill="#9a6a5c">BORDEAUX</text>
+          </svg></div>
+          <div class="cap">Notecard · 4 × 6 in</div>
+        </div>
+        <div class="side">
+          <div class="card-2x3"><svg viewBox="0 0 600 900" role="img" aria-label="Bordeaux claret tag">
+            <rect width="600" height="900" fill="#fbf6ee"/>
+            <g filter="url(#wc)"><ellipse cx="520" cy="90" rx="230" ry="200" fill="#b07a7e" opacity=".55"/><ellipse cx="560" cy="40" rx="160" ry="150" fill="#5c2b2e" opacity=".6"/></g>
+            <text x="110" y="520" text-anchor="start" font-family="Style Script" font-size="150" fill="#5c2b2e">R</text>
+            <text x="110" y="660" text-anchor="start" font-family="Style Script" font-size="150" fill="#5c2b2e"><tspan font-family="EB Garamond" font-style="italic" fill="#a9793f">&amp;</tspan>M</text>
+          </svg></div>
+          <div class="cap">Tag · 2 × 3 in</div>
+          <p class="vnote">The wash breaks free into one corner; the names drop low-left in flowing Style Script. Looser, editorial, modern.</p>
+          <p class="spec"><b>Type</b> Style Script + Cinzel · <b>Finish</b> Letterpress wine ink, hot-foil rule</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bordeaux iii — Sculpted Cipher (dimensional raised) -->
+    <div class="variant">
+      <div class="vhead"><span class="vnum">iii</span><span class="vname">The Sculpted Cipher</span><span class="vkind dim">dimensional · raised foil</span></div>
+      <div class="lay">
+        <div>
+          <div class="card-4x6"><svg viewBox="0 0 1800 1200" role="img" aria-label="Bordeaux cipher card">
+            <rect width="1800" height="1200" fill="#fbf6ee"/>
+            <g filter="url(#wcSoft)"><ellipse cx="900" cy="1380" rx="1100" ry="360" fill="#8a4a4f" opacity=".5"/><ellipse cx="950" cy="1470" rx="900" ry="320" fill="#5c2b2e" opacity=".8"/></g>
+            <rect width="1800" height="1200" filter="url(#grain)" opacity=".4"/>
+            <g filter="url(#reliefUL)">
+              <text x="905" y="640" text-anchor="end" font-family="Corinthia" font-size="470" fill="url(#goldFoil)">R</text>
+              <text x="895" y="640" text-anchor="start" font-family="Corinthia" font-size="470" fill="url(#goldFoil)">M</text>
+              <text x="900" y="614" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="196" fill="url(#goldFoil)">&amp;</text>
             </g>
-            <rect x="30" y="30" width="540" height="840" fill="none" stroke="#5a7194" stroke-width="2.4"/>
-            <rect x="46" y="46" width="508" height="808" fill="none" stroke="#8ba0bd" stroke-width="1"/>
-            <text class="t-ital" x="300" y="470" text-anchor="middle" font-size="104" fill="#33475e">R &amp; M</text>
-            <circle cx="278" cy="532" r="3" fill="#5a7194"/>
-            <circle cx="300" cy="532" r="4.4" fill="#5a7194"/>
-            <circle cx="322" cy="532" r="3" fill="#5a7194"/>
-          </svg>
-          </div>
-          <div class="caplabel">Tag · 2 × 3 in</div>
+            <text x="900" y="880" text-anchor="middle" font-family="Cinzel" font-weight="500" font-size="30" letter-spacing="16" fill="#8a5a4c">RUCHI &#160;&amp;&#160; MRIDUL</text>
+          </svg></div>
+          <div class="cap">Notecard · 4 × 6 in</div>
         </div>
-        <div class="docket">
-          <h4>Printer's Docket</h4>
-          <dl>
-            <dt>Palette</dt><dd><span class="dchips"><i style="background:#d3dfee"></i><i style="background:#5a7194"></i><i style="background:#33475e"></i></span></dd>
-            <dt>Stock</dt><dd>600 gsm cotton, porcelain white</dd>
-            <dt>Type</dt><dd>Cormorant capitals &amp; italic</dd>
-            <dt>Finish</dt><dd>Letterpress delft-blue ink, painted keyline</dd>
-          </dl>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ PROOF VI — THE BORDEAUX ============ -->
-  <section class="proof" id="p6">
-    <div class="proofhead"><span class="pnum">Proof VI</span><h2>The Bordeaux</h2></div>
-    <p class="pdesc">The richest of the light cards. A deep wine watercolour pools along the foot of cream stock, held back by a single gold rule; the names sit high in wine-ink capitals with a gold copperplate ampersand. Dinner-party stationery.</p>
-    <div class="prooflay">
-      <div class="cardwrap">
-        <div class="card-4x6">
-        <svg viewBox="0 0 1800 1200" role="img" aria-label="Bordeaux 4 by 6 notecard">
-          <defs>
-            <linearGradient id="p6-foil" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#8a6c07"/><stop offset=".45" stop-color="#c9ab52"/>
-              <stop offset=".55" stop-color="#e6d391"/><stop offset="1" stop-color="#8a6c07"/>
-            </linearGradient>
-            <filter id="p6-wc" x="-40%" y="-40%" width="180%" height="180%">
-              <feTurbulence type="fractalNoise" baseFrequency="0.006" numOctaves="2" seed="61" result="n"/>
-              <feDisplacementMap in="SourceGraphic" in2="n" scale="70"/>
-              <feGaussianBlur stdDeviation="9"/>
-            </filter>
-            <filter id="p6-grain"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="37"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 0.45  0 0 0 0 0.30  0 0 0 0 0.22  0 0 0 0.05 0"/></filter>
-          </defs>
-          <rect width="1800" height="1200" fill="#fbf6ee"/>
-          <g filter="url(#p6-wc)">
-            <ellipse cx="900" cy="1380" rx="1150" ry="420" fill="#d9b6b8" opacity=".6"/>
-            <ellipse cx="620" cy="1420" rx="850" ry="370" fill="#b07a7e" opacity=".65"/>
-            <ellipse cx="1280" cy="1440" rx="800" ry="360" fill="#8a4a4f" opacity=".7"/>
-            <ellipse cx="950" cy="1490" rx="950" ry="360" fill="#5c2b2e" opacity=".9"/>
-          </g>
-          <rect width="1800" height="1200" filter="url(#p6-grain)" opacity=".5"/>
-          <line x1="140" y1="920" x2="1660" y2="920" stroke="url(#p6-foil)" stroke-width="2.2"/>
-          <text class="t-caps" x="812" y="440" text-anchor="end" font-size="72" letter-spacing="22" fill="#5c2b2e">RUCHI</text>
-          <text class="t-ital" x="900" y="440" text-anchor="middle" font-size="88" fill="url(#p6-foil)">&amp;</text>
-          <text class="t-caps" x="992" y="440" text-anchor="start" font-size="72" letter-spacing="22" fill="#5c2b2e">MRIDUL</text>
-          <rect x="893" y="520" width="14" height="14" transform="rotate(45 900 527)" fill="url(#p6-foil)"/>
-        </svg>
-        </div>
-        <div class="caplabel">Notecard · 4 × 6 in</div>
-      </div>
-      <div class="sidecol">
-        <div class="tagblock">
-          <div class="card-2x3">
-          <svg viewBox="0 0 600 900" role="img" aria-label="Bordeaux 2 by 3 tag">
-            <defs>
-              <linearGradient id="p6t-foil" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#a8862a"/><stop offset=".45" stop-color="#d9bc66"/>
-                <stop offset=".55" stop-color="#eede9d"/><stop offset="1" stop-color="#a8862a"/>
-              </linearGradient>
-              <linearGradient id="p6t-bg" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#6d3438"/><stop offset="1" stop-color="#4c2225"/>
-              </linearGradient>
-            </defs>
-            <rect width="600" height="900" fill="url(#p6t-bg)"/>
-            <rect x="30" y="30" width="540" height="840" fill="none" stroke="url(#p6t-foil)" stroke-width="2.2"/>
-            <text class="t-script" x="300" y="475" text-anchor="middle" font-size="116" fill="#f3e2cf">R &amp; M</text>
-            <rect x="293" y="533" width="11" height="11" transform="rotate(45 299 539)" fill="url(#p6t-foil)"/>
-          </svg>
-          </div>
-          <div class="caplabel">Tag · 2 × 3 in</div>
-        </div>
-        <div class="docket">
-          <h4>Printer's Docket</h4>
-          <dl>
-            <dt>Palette</dt><dd><span class="dchips"><i style="background:#fbf6ee"></i><i style="background:#5c2b2e"></i><i style="background:linear-gradient(135deg,#8a6c07,#e6d391)"></i></span></dd>
-            <dt>Stock</dt><dd>600 gsm cotton, cream</dd>
-            <dt>Type</dt><dd>Cormorant capitals, copperplate ampersand</dd>
-            <dt>Finish</dt><dd>Letterpress wine ink, hot-foil rule &amp; ampersand</dd>
-          </dl>
+        <div class="side">
+          <div class="card-2x3"><svg viewBox="0 0 600 900" role="img" aria-label="Bordeaux cipher tag">
+            <linearGradient id="b3bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6d3438"/><stop offset="1" stop-color="#4c2225"/></linearGradient>
+            <rect width="600" height="900" fill="url(#b3bg)"/>
+            <g filter="url(#reliefUL)">
+              <text x="300" y="500" text-anchor="end" font-family="Corinthia" font-size="280" fill="url(#goldFoil)">R</text>
+              <text x="300" y="500" text-anchor="start" font-family="Corinthia" font-size="280" fill="url(#goldFoil)">M</text>
+              <text x="300" y="482" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="120" fill="url(#goldFoil)">&amp;</text>
+            </g>
+          </svg></div>
+          <div class="cap">Tag · 2 × 3 in</div>
+          <p class="vnote">The R&amp;M cipher raised in hot gold over the wine wash — real relief lit from the upper-left. The monogram is sculpted, not printed.</p>
+          <p class="spec"><b>Type</b> Corinthia cipher · <b>Finish</b> Sculpted hot-foil emboss on cream cotton</p>
         </div>
       </div>
     </div>
-  </section>
 
-  <!-- ============ PROOF VII — THE MIDNIGHT ============ -->
-  <section class="proof" id="p7">
-    <div class="proofhead"><span class="pnum">Proof VII</span><h2>The Midnight</h2></div>
-    <p class="pdesc">The evening card. Deep midnight stock, gilded edges, a single hairline of champagne gold and the names in foil copperplate under a small gold spark. The most dramatic of the seven — for notes that arrive like invitations.</p>
-    <div class="prooflay">
-      <div class="cardwrap">
-        <div class="card-4x6">
-        <svg viewBox="0 0 1800 1200" role="img" aria-label="Midnight 4 by 6 notecard">
-          <defs>
-            <linearGradient id="p7-foil" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0" stop-color="#a8862a"/><stop offset=".45" stop-color="#d9bc66"/>
-              <stop offset=".55" stop-color="#eede9d"/><stop offset="1" stop-color="#a8862a"/>
-            </linearGradient>
-            <radialGradient id="p7-bg" cx=".5" cy=".42" r=".9">
-              <stop offset="0" stop-color="#1d2a3c"/><stop offset="1" stop-color="#0f1826"/>
-            </radialGradient>
-            <filter id="p7-grain"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="2" seed="43"/>
-              <feColorMatrix type="matrix" values="0 0 0 0 0.85  0 0 0 0 0.78  0 0 0 0 0.55  0 0 0 0.03 0"/></filter>
-          </defs>
-          <rect width="1800" height="1200" fill="url(#p7-bg)"/>
-          <rect width="1800" height="1200" filter="url(#p7-grain)" opacity=".6"/>
-          <rect x="70" y="70" width="1660" height="1060" fill="none" stroke="url(#p7-foil)" stroke-width="2"/>
-          <path d="M 900 330 C 904 352 908 356 930 360 C 908 364 904 368 900 390 C 896 368 892 364 870 360 C 892 356 896 352 900 330 Z" fill="url(#p7-foil)"/>
-          <circle cx="836" cy="360" r="2.4" fill="url(#p7-foil)" opacity=".8"/>
-          <circle cx="964" cy="360" r="2.4" fill="url(#p7-foil)" opacity=".8"/>
-          <text class="t-script" x="900" y="660" text-anchor="middle" font-size="152" fill="url(#p7-foil)">Ruchi &amp; Mridul</text>
-          <line x1="700" y1="742" x2="1100" y2="742" stroke="url(#p7-foil)" stroke-width="1.4" opacity=".9"/>
-          <text class="t-caps" x="900" y="806" text-anchor="middle" font-size="26" letter-spacing="14" fill="#c8b06a" opacity=".85">WITH&#160;COMPLIMENTS</text>
-        </svg>
+    <!-- Bordeaux iv — Dimensional Script (extruded) -->
+    <div class="variant">
+      <div class="vhead"><span class="vnum">iv</span><span class="vname">Dimensional Script</span><span class="vkind dim">dimensional · extruded foil</span></div>
+      <div class="lay">
+        <div>
+          <div class="card-4x6"><svg viewBox="0 0 1800 1200" role="img" aria-label="Bordeaux extruded script card">
+            <rect width="1800" height="1200" fill="#fbf6ee"/>
+            <g filter="url(#wcSoft)"><ellipse cx="900" cy="1080" rx="1250" ry="620" fill="#8a4a4f" opacity=".5"/><ellipse cx="900" cy="1260" rx="1100" ry="540" fill="#5c2b2e" opacity=".85"/></g>
+            <rect width="1800" height="1200" filter="url(#grain)" opacity=".4"/>
+            <g font-family="Corinthia" font-size="300" text-anchor="middle">
+              <g fill="#5a3d12">
+                <text x="900.9" y="660.9">Ruchi &amp; Mridul</text><text x="901.8" y="661.8">Ruchi &amp; Mridul</text><text x="902.7" y="662.7">Ruchi &amp; Mridul</text>
+                <text x="903.6" y="663.6">Ruchi &amp; Mridul</text><text x="904.5" y="664.5">Ruchi &amp; Mridul</text><text x="905.4" y="665.4">Ruchi &amp; Mridul</text>
+                <text x="906.3" y="666.3">Ruchi &amp; Mridul</text><text x="907.2" y="667.2">Ruchi &amp; Mridul</text><text x="908.1" y="668.1">Ruchi &amp; Mridul</text><text x="909" y="669">Ruchi &amp; Mridul</text>
+              </g>
+              <text x="900" y="660" fill="url(#goldFace)">Ruchi &amp; Mridul</text>
+            </g>
+            <text x="900" y="900" text-anchor="middle" font-family="Cinzel" font-size="28" letter-spacing="16" fill="#e9cdb0">A&#160;NOTE&#160;FROM&#160;OUR&#160;TABLE</text>
+          </svg></div>
+          <div class="cap">Notecard · 4 × 6 in</div>
         </div>
-        <div class="caplabel">Notecard · 4 × 6 in</div>
-      </div>
-      <div class="sidecol">
-        <div class="tagblock">
-          <div class="card-2x3">
-          <svg viewBox="0 0 600 900" role="img" aria-label="Midnight 2 by 3 tag">
-            <defs>
-              <linearGradient id="p7t-foil" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#a8862a"/><stop offset=".45" stop-color="#d9bc66"/>
-                <stop offset=".55" stop-color="#eede9d"/><stop offset="1" stop-color="#a8862a"/>
-              </linearGradient>
-              <radialGradient id="p7t-bg" cx=".5" cy=".4" r="1">
-                <stop offset="0" stop-color="#1d2a3c"/><stop offset="1" stop-color="#0f1826"/>
-              </radialGradient>
-            </defs>
-            <rect width="600" height="900" fill="url(#p7t-bg)"/>
-            <rect x="32" y="32" width="536" height="836" fill="none" stroke="url(#p7t-foil)" stroke-width="1.8"/>
-            <path d="M 300 268 C 303 285 306 288 322 291 C 306 294 303 297 300 314 C 297 297 294 294 278 291 C 294 288 297 285 300 268 Z" fill="url(#p7t-foil)"/>
-            <text class="t-script" x="300" y="480" text-anchor="middle" font-size="112" fill="url(#p7t-foil)">R &amp; M</text>
-            <line x1="230" y1="540" x2="370" y2="540" stroke="url(#p7t-foil)" stroke-width="1.2" opacity=".9"/>
-          </svg>
-          </div>
-          <div class="caplabel">Tag · 2 × 3 in</div>
-        </div>
-        <div class="docket">
-          <h4>Printer's Docket</h4>
-          <dl>
-            <dt>Palette</dt><dd><span class="dchips"><i style="background:#16202e"></i><i style="background:#d9bc66"></i><i style="background:#eede9d"></i></span></dd>
-            <dt>Stock</dt><dd>700 gsm duplex, midnight blue, gilded edges</dd>
-            <dt>Type</dt><dd>Pinyon copperplate script</dd>
-            <dt>Finish</dt><dd>Hot-foil champagne gold throughout</dd>
-          </dl>
+        <div class="side">
+          <div class="card-2x3"><svg viewBox="0 0 600 900" role="img" aria-label="Bordeaux extruded tag">
+            <linearGradient id="b4bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6d3438"/><stop offset="1" stop-color="#3f1c1f"/></linearGradient>
+            <rect width="600" height="900" fill="url(#b4bg)"/>
+            <g font-family="Corinthia" font-size="215" text-anchor="middle">
+              <g fill="#5a3d12"><text x="301" y="491">R&amp;M</text><text x="302" y="492">R&amp;M</text><text x="303" y="493">R&amp;M</text><text x="304" y="494">R&amp;M</text><text x="305" y="495">R&amp;M</text><text x="306" y="496">R&amp;M</text><text x="307" y="497">R&amp;M</text><text x="308" y="498">R&amp;M</text></g>
+              <text x="300" y="490" fill="url(#goldFace)">R&amp;M</text>
+            </g>
+          </svg></div>
+          <div class="cap">Tag · 2 × 3 in</div>
+          <p class="vnote">The names built in three dimensions — a polished gold face over an extruded body that casts its own shadow across the wine wash. The showpiece.</p>
+          <p class="spec"><b>Type</b> Corinthia, extruded · <b>Finish</b> Sculpted gold over letterpress wine</p>
         </div>
       </div>
     </div>
+
   </section>
 
-  <div class="choose">
-    <div class="lbl">Next Step</div>
-    <p>Pick a proof — <i>I&nbsp;Heirloom</i> · <i>II&nbsp;Signature</i> · <i>III&nbsp;Editorial</i> · <i>IV&nbsp;Sage</i> · <i>V&nbsp;Porcelain</i> · <i>VI&nbsp;Bordeaux</i> · <i>VII&nbsp;Midnight</i> — and print-ready files follow in the same sizes.</p>
-    <small>Every card above is drawn to exact 4×6 and 2×3 proportion, so what you see is what prints.</small>
-  </div>
+  <!-- =================================================================== -->
+  <!-- =========================== MIDNIGHT ============================== -->
+  <!-- =================================================================== -->
+  <section class="theme" id="midnight">
+    <div class="thead"><span class="tnum">Colourway III</span><h2>The Midnight</h2></div>
+    <p class="tdesc">The evening card. Deep midnight stock, gilded edges, champagne foil throughout. The most dramatic of the three — and where the dimensional treatments sing, gold catching light against the dark.</p>
+    <div class="chips"><i style="background:#16202e"></i><i style="background:#cbab5f"></i><i style="background:#f0dca0"></i></div>
+
+    <!-- Midnight i — The Evening Card (flat classic) -->
+    <div class="variant">
+      <div class="vhead"><span class="vnum">i</span><span class="vname">The Evening Card</span><span class="vkind">flat proof · print-true</span></div>
+      <div class="lay">
+        <div>
+          <div class="card-4x6"><svg viewBox="0 0 1800 1200" role="img" aria-label="Midnight evening card">
+            <radialGradient id="m1bg" cx=".5" cy=".42" r=".9"><stop offset="0" stop-color="#1d2a3c"/><stop offset="1" stop-color="#0f1826"/></radialGradient>
+            <rect width="1800" height="1200" fill="url(#m1bg)"/>
+            <rect width="1800" height="1200" filter="url(#grain)" opacity=".5"/>
+            <rect x="70" y="70" width="1660" height="1060" fill="none" stroke="url(#champFoil)" stroke-width="2"/>
+            <path d="M 900 300 C 904 322 908 326 930 330 C 908 334 904 338 900 360 C 896 338 892 334 870 330 C 892 326 896 322 900 300 Z" fill="url(#champFoil)"/>
+            <text x="770" y="700" text-anchor="end" font-family="Imperial Script" font-size="188" fill="url(#champFoil)">Ruchi</text>
+            <text x="900" y="682" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="120" fill="url(#champagne)">&amp;</text>
+            <text x="1030" y="700" text-anchor="start" font-family="Imperial Script" font-size="188" fill="url(#champFoil)">Mridul</text>
+            <line x1="720" y1="788" x2="1080" y2="788" stroke="url(#champFoil)" stroke-width="1.3" opacity=".9"/>
+            <text x="900" y="852" text-anchor="middle" font-family="Cinzel" font-size="25" letter-spacing="14" fill="#c8b06a">WITH&#160;COMPLIMENTS</text>
+          </svg></div>
+          <div class="cap">Notecard · 4 × 6 in</div>
+        </div>
+        <div class="side">
+          <div class="card-2x3"><svg viewBox="0 0 600 900" role="img" aria-label="Midnight tag">
+            <radialGradient id="m1tbg" cx=".5" cy=".4" r="1"><stop offset="0" stop-color="#1d2a3c"/><stop offset="1" stop-color="#0f1826"/></radialGradient>
+            <rect width="600" height="900" fill="url(#m1tbg)"/>
+            <rect x="32" y="32" width="536" height="836" fill="none" stroke="url(#champFoil)" stroke-width="1.8"/>
+            <text x="300" y="500" text-anchor="middle" font-family="Imperial Script" font-size="150" fill="url(#champFoil)">R&#160;<tspan font-family="EB Garamond" font-style="italic" fill="url(#champagne)">&amp;</tspan>&#160;M</text>
+          </svg></div>
+          <div class="cap">Tag · 2 × 3 in</div>
+          <p class="vnote">Champagne foil script under a small gilt spark, held in a hairline frame on midnight stock with gilded edges.</p>
+          <p class="spec"><b>Type</b> Imperial Script + Cinzel · <b>Finish</b> Champagne hot-foil, gilt edges</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Midnight ii — Constellation (flat free-flowing) -->
+    <div class="variant">
+      <div class="vhead"><span class="vnum">ii</span><span class="vname">Constellation</span><span class="vkind">flat proof · free-flowing</span></div>
+      <div class="lay">
+        <div>
+          <div class="card-4x6"><svg viewBox="0 0 1800 1200" role="img" aria-label="Midnight constellation card">
+            <radialGradient id="m2bg" cx=".7" cy=".25" r="1"><stop offset="0" stop-color="#20304a"/><stop offset="1" stop-color="#0d1420"/></radialGradient>
+            <rect width="1800" height="1200" fill="url(#m2bg)"/>
+            <rect width="1800" height="1200" filter="url(#grain)" opacity=".5"/>
+            <g fill="url(#champagne)">
+              <circle cx="1360" cy="220" r="3.5"/><circle cx="1500" cy="300" r="2.4"/><circle cx="1250" cy="330" r="2.2"/><circle cx="1580" cy="180" r="2.8"/><circle cx="1430" cy="400" r="2"/><circle cx="1180" cy="230" r="2"/>
+              <path d="M 1300 260 C 1303 277 1306 280 1322 283 C 1306 286 1303 289 1300 306 C 1297 289 1294 286 1278 283 C 1294 280 1297 277 1300 260 Z"/></g>
+            <g stroke="url(#champFoil)" stroke-width="1" opacity=".5"><path d="M1180 230 L1300 283 L1360 220 L1500 300 L1430 400" fill="none"/></g>
+            <text x="230" y="820" text-anchor="start" font-family="WindSong" font-weight="500" font-size="150" fill="url(#champFoil)">Ruchi</text>
+            <text x="230" y="980" text-anchor="start" font-family="WindSong" font-weight="500" font-size="150" fill="url(#champFoil)"><tspan font-family="EB Garamond" font-style="italic" fill="url(#champagne)">&amp; </tspan>Mridul</text>
+            <text x="150" y="500" text-anchor="middle" font-family="Jost" font-weight="400" font-size="24" letter-spacing="20" fill="#8f9db2" transform="rotate(-90 150 500)">AFTER DARK</text>
+          </svg></div>
+          <div class="cap">Notecard · 4 × 6 in</div>
+        </div>
+        <div class="side">
+          <div class="card-2x3"><svg viewBox="0 0 600 900" role="img" aria-label="Midnight constellation tag">
+            <radialGradient id="m2tbg" cx=".6" cy=".3" r="1"><stop offset="0" stop-color="#20304a"/><stop offset="1" stop-color="#0d1420"/></radialGradient>
+            <rect width="600" height="900" fill="url(#m2tbg)"/>
+            <g fill="url(#champagne)"><circle cx="430" cy="180" r="3"/><circle cx="500" cy="240" r="2"/><circle cx="370" cy="230" r="2"/></g>
+            <text x="110" y="560" text-anchor="start" font-family="WindSong" font-weight="500" font-size="132" fill="url(#champFoil)">R</text>
+            <text x="110" y="700" text-anchor="start" font-family="WindSong" font-weight="500" font-size="132" fill="url(#champFoil)"><tspan font-family="EB Garamond" font-style="italic" fill="url(#champagne)">&amp;</tspan>M</text>
+          </svg></div>
+          <div class="cap">Tag · 2 × 3 in</div>
+          <p class="vnote">A scatter of gilt stars traces a constellation into one corner; the names drop low in dramatic WindSong. Free-flowing, nocturnal.</p>
+          <p class="spec"><b>Type</b> WindSong + Jost · <b>Finish</b> Champagne foil on midnight, gilt edges</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Midnight iii — Sculpted Cipher (dimensional raised) -->
+    <div class="variant">
+      <div class="vhead"><span class="vnum">iii</span><span class="vname">The Sculpted Cipher</span><span class="vkind dim">dimensional · raised foil</span></div>
+      <div class="lay">
+        <div>
+          <div class="card-4x6"><svg viewBox="0 0 1800 1200" role="img" aria-label="Midnight cipher card">
+            <radialGradient id="m3bg" cx=".5" cy=".45" r=".9"><stop offset="0" stop-color="#1d2a3c"/><stop offset="1" stop-color="#0f1826"/></radialGradient>
+            <rect width="1800" height="1200" fill="url(#m3bg)"/>
+            <rect width="1800" height="1200" filter="url(#grain)" opacity=".5"/>
+            <rect x="70" y="70" width="1660" height="1060" fill="none" stroke="url(#champFoil)" stroke-width="1.4" opacity=".5"/>
+            <g filter="url(#reliefUL)">
+              <text x="905" y="680" text-anchor="end" font-family="Corinthia" font-size="500" fill="url(#champFoil)">R</text>
+              <text x="895" y="680" text-anchor="start" font-family="Corinthia" font-size="500" fill="url(#champFoil)">M</text>
+              <text x="900" y="650" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="210" fill="url(#champFoil)">&amp;</text>
+            </g>
+            <text x="900" y="900" text-anchor="middle" font-family="Cinzel" font-weight="500" font-size="32" letter-spacing="16" fill="#c8b06a">RUCHI &#160;&amp;&#160; MRIDUL</text>
+          </svg></div>
+          <div class="cap">Notecard · 4 × 6 in</div>
+        </div>
+        <div class="side">
+          <div class="card-2x3"><svg viewBox="0 0 600 900" role="img" aria-label="Midnight cipher tag">
+            <radialGradient id="m3tbg" cx=".5" cy=".42" r="1"><stop offset="0" stop-color="#1d2a3c"/><stop offset="1" stop-color="#0f1826"/></radialGradient>
+            <rect width="600" height="900" fill="url(#m3tbg)"/>
+            <g filter="url(#reliefUL)">
+              <text x="300" y="500" text-anchor="end" font-family="Corinthia" font-size="280" fill="url(#champFoil)">R</text>
+              <text x="300" y="500" text-anchor="start" font-family="Corinthia" font-size="280" fill="url(#champFoil)">M</text>
+              <text x="300" y="482" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="120" fill="url(#champFoil)">&amp;</text>
+            </g>
+          </svg></div>
+          <div class="cap">Tag · 2 × 3 in</div>
+          <p class="vnote">The cipher raised in champagne gold against the dark — relief lighting makes it glow and lift. The most jewel-like of the set.</p>
+          <p class="spec"><b>Type</b> Corinthia cipher · <b>Finish</b> Sculpted champagne foil on midnight duplex</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Midnight iv — Dimensional Script (extruded) -->
+    <div class="variant">
+      <div class="vhead"><span class="vnum">iv</span><span class="vname">Dimensional Script</span><span class="vkind dim">dimensional · extruded foil</span></div>
+      <div class="lay">
+        <div>
+          <div class="card-4x6"><svg viewBox="0 0 1800 1200" role="img" aria-label="Midnight extruded script card">
+            <radialGradient id="m4bg" cx=".5" cy=".45" r=".95"><stop offset="0" stop-color="#1f2d40"/><stop offset="1" stop-color="#0d1521"/></radialGradient>
+            <rect width="1800" height="1200" fill="url(#m4bg)"/>
+            <rect width="1800" height="1200" filter="url(#grain)" opacity=".5"/>
+            <g font-family="Corinthia" font-size="300" text-anchor="middle">
+              <g fill="#4a3410">
+                <text x="900.9" y="660.9">Ruchi &amp; Mridul</text><text x="901.8" y="661.8">Ruchi &amp; Mridul</text><text x="902.7" y="662.7">Ruchi &amp; Mridul</text>
+                <text x="903.6" y="663.6">Ruchi &amp; Mridul</text><text x="904.5" y="664.5">Ruchi &amp; Mridul</text><text x="905.4" y="665.4">Ruchi &amp; Mridul</text>
+                <text x="906.3" y="666.3">Ruchi &amp; Mridul</text><text x="907.2" y="667.2">Ruchi &amp; Mridul</text><text x="908.1" y="668.1">Ruchi &amp; Mridul</text><text x="909" y="669">Ruchi &amp; Mridul</text>
+              </g>
+              <text x="900" y="660" fill="url(#champagne)">Ruchi &amp; Mridul</text>
+            </g>
+            <text x="900" y="900" text-anchor="middle" font-family="Cinzel" font-size="26" letter-spacing="16" fill="#c8b06a">AT&#160;HOME&#160;·&#160;AFTER&#160;EIGHT</text>
+          </svg></div>
+          <div class="cap">Notecard · 4 × 6 in</div>
+        </div>
+        <div class="side">
+          <div class="card-2x3"><svg viewBox="0 0 600 900" role="img" aria-label="Midnight extruded tag">
+            <radialGradient id="m4tbg" cx=".5" cy=".42" r="1"><stop offset="0" stop-color="#1f2d40"/><stop offset="1" stop-color="#0d1521"/></radialGradient>
+            <rect width="600" height="900" fill="url(#m4tbg)"/>
+            <g font-family="Corinthia" font-size="215" text-anchor="middle">
+              <g fill="#4a3410"><text x="301" y="491">R&amp;M</text><text x="302" y="492">R&amp;M</text><text x="303" y="493">R&amp;M</text><text x="304" y="494">R&amp;M</text><text x="305" y="495">R&amp;M</text><text x="306" y="496">R&amp;M</text><text x="307" y="497">R&amp;M</text><text x="308" y="498">R&amp;M</text></g>
+              <text x="300" y="490" fill="url(#champagne)">R&amp;M</text>
+            </g>
+          </svg></div>
+          <div class="cap">Tag · 2 × 3 in</div>
+          <p class="vnote">Champagne script built in three dimensions on the dark — a polished gold face over an extruded body. The single most dramatic piece in the collection.</p>
+          <p class="spec"><b>Type</b> Corinthia, extruded · <b>Finish</b> Sculpted champagne foil on midnight duplex</p>
+        </div>
+      </div>
+    </div>
+
+  </section>
 
 </main>
 
 <footer>
-  <div class="fmono">R &amp; M</div>
-  <div class="meta">Private stationery proofs · 2026<br>
-  This page is unlisted — visible only to those who hold the link.</div>
+  <div class="fmono">Ruchi &amp; Mridul</div>
+  <p class="meta">Private stationery proofs · three colourways, four expressions each · printed to order</p>
 </footer>
 
 </body>
