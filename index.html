@@ -86,9 +86,10 @@
   </filter>
   <!-- CARVED / blind deboss, light upper-left -->
   <filter id="debossUL" x="-25%" y="-25%" width="150%" height="150%">
-    <feGaussianBlur in="SourceAlpha" stdDeviation="3" result="b"/>
-    <feSpecularLighting in="b" surfaceScale="-7" specularConstant="0.8" specularExponent="16" lighting-color="#ffffff" result="s">
-      <feDistantLight azimuth="235" elevation="55"/></feSpecularLighting>
+    <feDropShadow dx="2" dy="2" stdDeviation="1.2" flood-color="#ffffff" flood-opacity="0.85"/>
+    <feGaussianBlur in="SourceAlpha" stdDeviation="2.6" result="b"/>
+    <feSpecularLighting in="b" surfaceScale="-12" specularConstant="1.05" specularExponent="15" lighting-color="#ffffff" result="s">
+      <feDistantLight azimuth="235" elevation="52"/></feSpecularLighting>
     <feComposite in="s" in2="SourceAlpha" operator="in" result="sc"/>
     <feMerge><feMergeNode in="SourceGraphic"/><feMergeNode in="sc"/></feMerge>
   </filter>
@@ -252,12 +253,12 @@
             <rect width="1800" height="1200" fill="#f1eee2"/>
             <g filter="url(#wc)"><ellipse cx="1680" cy="120" rx="320" ry="190" fill="#e3ebde" opacity=".8"/><ellipse cx="130" cy="1110" rx="320" ry="185" fill="#e3ebde" opacity=".8"/></g>
             <rect width="1800" height="1200" filter="url(#grain)" opacity=".5"/>
-            <g filter="url(#debossUL)" fill="#e8e4d4">
+            <g filter="url(#debossUL)" fill="#d6d3be">
               <text x="770" y="660" text-anchor="end" font-family="Corinthia" font-size="228">Ruchi</text>
               <text x="900" y="646" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="128">&amp;</text>
               <text x="1030" y="660" text-anchor="start" font-family="Corinthia" font-size="228">Mridul</text>
             </g>
-            <g filter="url(#debossUL)" fill="#e8e4d4"><path d="M 812 744 L 988 744" stroke="#e8e4d4" stroke-width="4"/></g>
+            <g filter="url(#debossUL)" fill="#d6d3be"><path d="M 812 744 L 988 744" stroke="#d6d3be" stroke-width="4"/></g>
             <text x="900" y="820" text-anchor="middle" font-family="Cinzel" font-size="27" letter-spacing="15" fill="#b0a892">A&#160;LITTLE&#160;NOTE</text>
           </svg></div>
           <div class="cap">Notecard · 4 × 6 in</div>
@@ -265,7 +266,7 @@
         <div class="side">
           <div class="card-2x3"><svg viewBox="0 0 600 900" role="img" aria-label="Sage pressed tag">
             <rect width="600" height="900" fill="#f1eee2"/>
-            <g filter="url(#debossUL)" fill="#e8e4d4">
+            <g filter="url(#debossUL)" fill="#d6d3be">
               <text x="252" y="500" text-anchor="end" font-family="Corinthia" font-size="176">R</text>
               <text x="300" y="486" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="82">&amp;</text>
               <text x="348" y="500" text-anchor="start" font-family="Corinthia" font-size="176">M</text>
