@@ -44,7 +44,11 @@
   .lay{display:grid;grid-template-columns:1fr 220px;gap:30px;align-items:start}
   @media(max-width:820px){.lay{grid-template-columns:1fr}}
   .card-4x6,.card-2x3{border-radius:3px;overflow:hidden;
-    box-shadow:0 1px 2px rgba(40,30,10,.12),0 8px 22px rgba(40,30,10,.14),0 22px 50px rgba(40,30,10,.12)}
+    box-shadow:0 1px 2px rgba(40,30,10,.12),0 8px 22px rgba(40,30,10,.14),0 22px 50px rgba(40,30,10,.12);
+    transition:transform .35s ease, box-shadow .35s ease}
+  .card-4x6:hover,.card-2x3:hover{transform:translateY(-5px);
+    box-shadow:0 2px 3px rgba(40,30,10,.10),0 14px 30px rgba(40,30,10,.16),0 40px 80px rgba(40,30,10,.17)}
+  @media(prefers-reduced-motion:reduce){.card-4x6,.card-2x3{transition:none}.card-4x6:hover,.card-2x3:hover{transform:none}}
   .card-4x6 svg,.card-2x3 svg{display:block;width:100%;height:auto}
   .cap{margin-top:11px;text-align:center;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:#b3a789}
   .side{display:flex;flex-direction:column;gap:12px}
@@ -52,6 +56,13 @@
   .vnote{font-size:13.5px;color:var(--muted);line-height:1.55;margin-top:2px}
   .spec{font-size:11px;color:#b3a789;letter-spacing:.02em;margin-top:10px;border-top:1px dashed var(--line);padding-top:9px}
   .spec b{color:#8a7c62;font-weight:500}
+
+  /* choose band */
+  .choose{margin-top:60px;background:linear-gradient(150deg,#171410,#0c0b0a);border-radius:18px;text-align:center;padding:42px 28px;position:relative;overflow:hidden}
+  .choose::after{content:"";position:absolute;inset:0;border-radius:18px;border:1px solid rgba(185,138,62,.35);pointer-events:none}
+  .choose .lbl{text-transform:uppercase;letter-spacing:.4em;font-size:10.5px;color:var(--foil-hi);padding-left:.4em}
+  .choose p{font-family:var(--serif);font-size:clamp(20px,3.4vw,27px);color:#f4ead6;max-width:680px;margin:12px auto 0;line-height:1.45}
+  .choose p i{color:var(--foil-hi)}
 
   footer{border-top:1px solid var(--line);padding:46px 24px 42px;text-align:center;margin-top:40px}
   footer .fmono{font-family:'Ephesis',cursive;font-size:44px;color:#715810;line-height:1}
@@ -215,12 +226,14 @@
         <div>
           <div class="card-4x6"><svg viewBox="0 0 1800 1200" role="img" aria-label="Sage sculpted cipher card">
             <rect width="1800" height="1200" fill="#faf8ef"/>
-            <g filter="url(#wc)"><ellipse cx="1690" cy="90" rx="300" ry="180" fill="#e8efe3" opacity=".7"/><ellipse cx="110" cy="1120" rx="300" ry="170" fill="#e8efe3" opacity=".7"/></g>
+            <g filter="url(#wc)">
+              <ellipse cx="1670" cy="110" rx="330" ry="200" fill="#e8efe3" opacity=".85"/><ellipse cx="1580" cy="50" rx="220" ry="130" fill="#d6e3d0" opacity=".75"/>
+              <ellipse cx="140" cy="1100" rx="330" ry="190" fill="#e8efe3" opacity=".85"/><ellipse cx="240" cy="1160" rx="210" ry="120" fill="#d6e3d0" opacity=".7"/></g>
             <rect width="1800" height="1200" filter="url(#grain)" opacity=".4"/>
             <g filter="url(#reliefUL)">
-              <text x="905" y="700" text-anchor="end" font-family="Corinthia" font-size="500" fill="url(#goldFoil)">R</text>
-              <text x="895" y="700" text-anchor="start" font-family="Corinthia" font-size="500" fill="url(#goldFoil)">M</text>
-              <text x="900" y="670" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="210" fill="url(#goldFoil)">&amp;</text>
+              <text x="828" y="700" text-anchor="end" font-family="Corinthia" font-size="500" fill="url(#goldFoil)">R</text>
+              <text x="1000" y="700" text-anchor="start" font-family="Corinthia" font-size="500" fill="url(#goldFoil)">M</text>
+              <text x="900" y="668" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="215" fill="url(#goldFoil)">&amp;</text>
             </g>
             <text x="900" y="920" text-anchor="middle" font-family="Cinzel" font-weight="500" font-size="34" letter-spacing="16" fill="#5d6f55">RUCHI &#160;&amp;&#160; MRIDUL</text>
           </svg></div>
@@ -229,11 +242,11 @@
         <div class="side">
           <div class="card-2x3"><svg viewBox="0 0 600 900" role="img" aria-label="Sage cipher tag">
             <rect width="600" height="900" fill="#faf8ef"/>
-            <g filter="url(#wc)"><ellipse cx="510" cy="70" rx="180" ry="120" fill="#e8efe3" opacity=".7"/></g>
+            <g filter="url(#wc)"><ellipse cx="510" cy="70" rx="180" ry="120" fill="#e8efe3" opacity=".7"/><ellipse cx="90" cy="840" rx="170" ry="110" fill="#e8efe3" opacity=".7"/></g>
             <g filter="url(#reliefUL)">
-              <text x="300" y="500" text-anchor="end" font-family="Corinthia" font-size="280" fill="url(#goldFoil)">R</text>
-              <text x="300" y="500" text-anchor="start" font-family="Corinthia" font-size="280" fill="url(#goldFoil)">M</text>
-              <text x="300" y="482" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="120" fill="url(#goldFoil)">&amp;</text>
+              <text x="272" y="505" text-anchor="end" font-family="Corinthia" font-size="240" fill="url(#goldFoil)">R</text>
+              <text x="328" y="505" text-anchor="start" font-family="Corinthia" font-size="240" fill="url(#goldFoil)">M</text>
+              <text x="300" y="480" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="110" fill="url(#goldFoil)">&amp;</text>
             </g>
             <text x="300" y="640" text-anchor="middle" font-family="Cinzel" font-size="22" letter-spacing="10" fill="#5d6f55">R&#160;&amp;&#160;M</text>
           </svg></div>
@@ -366,9 +379,9 @@
             <g filter="url(#wcSoft)"><ellipse cx="900" cy="1380" rx="1100" ry="360" fill="#8a4a4f" opacity=".5"/><ellipse cx="950" cy="1470" rx="900" ry="320" fill="#5c2b2e" opacity=".8"/></g>
             <rect width="1800" height="1200" filter="url(#grain)" opacity=".4"/>
             <g filter="url(#reliefUL)">
-              <text x="905" y="640" text-anchor="end" font-family="Corinthia" font-size="470" fill="url(#goldFoil)">R</text>
-              <text x="895" y="640" text-anchor="start" font-family="Corinthia" font-size="470" fill="url(#goldFoil)">M</text>
-              <text x="900" y="614" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="196" fill="url(#goldFoil)">&amp;</text>
+              <text x="832" y="640" text-anchor="end" font-family="Corinthia" font-size="470" fill="url(#goldFoil)">R</text>
+              <text x="985" y="640" text-anchor="start" font-family="Corinthia" font-size="470" fill="url(#goldFoil)">M</text>
+              <text x="900" y="612" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="205" fill="url(#goldFoil)">&amp;</text>
             </g>
             <text x="900" y="880" text-anchor="middle" font-family="Cinzel" font-weight="500" font-size="30" letter-spacing="16" fill="#8a5a4c">RUCHI &#160;&amp;&#160; MRIDUL</text>
           </svg></div>
@@ -379,9 +392,9 @@
             <linearGradient id="b3bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6d3438"/><stop offset="1" stop-color="#4c2225"/></linearGradient>
             <rect width="600" height="900" fill="url(#b3bg)"/>
             <g filter="url(#reliefUL)">
-              <text x="300" y="500" text-anchor="end" font-family="Corinthia" font-size="280" fill="url(#goldFoil)">R</text>
-              <text x="300" y="500" text-anchor="start" font-family="Corinthia" font-size="280" fill="url(#goldFoil)">M</text>
-              <text x="300" y="482" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="120" fill="url(#goldFoil)">&amp;</text>
+              <text x="272" y="505" text-anchor="end" font-family="Corinthia" font-size="240" fill="url(#goldFoil)">R</text>
+              <text x="328" y="505" text-anchor="start" font-family="Corinthia" font-size="240" fill="url(#goldFoil)">M</text>
+              <text x="300" y="480" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="110" fill="url(#goldFoil)">&amp;</text>
             </g>
           </svg></div>
           <div class="cap">Tag · 2 × 3 in</div>
@@ -516,9 +529,9 @@
             <rect width="1800" height="1200" filter="url(#grain)" opacity=".5"/>
             <rect x="70" y="70" width="1660" height="1060" fill="none" stroke="url(#champFoil)" stroke-width="1.4" opacity=".5"/>
             <g filter="url(#reliefUL)">
-              <text x="905" y="680" text-anchor="end" font-family="Corinthia" font-size="500" fill="url(#champFoil)">R</text>
-              <text x="895" y="680" text-anchor="start" font-family="Corinthia" font-size="500" fill="url(#champFoil)">M</text>
-              <text x="900" y="650" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="210" fill="url(#champFoil)">&amp;</text>
+              <text x="828" y="680" text-anchor="end" font-family="Corinthia" font-size="500" fill="url(#champFoil)">R</text>
+              <text x="1000" y="680" text-anchor="start" font-family="Corinthia" font-size="500" fill="url(#champFoil)">M</text>
+              <text x="900" y="648" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="215" fill="url(#champFoil)">&amp;</text>
             </g>
             <text x="900" y="900" text-anchor="middle" font-family="Cinzel" font-weight="500" font-size="32" letter-spacing="16" fill="#c8b06a">RUCHI &#160;&amp;&#160; MRIDUL</text>
           </svg></div>
@@ -529,9 +542,9 @@
             <radialGradient id="m3tbg" cx=".5" cy=".42" r="1"><stop offset="0" stop-color="#1d2a3c"/><stop offset="1" stop-color="#0f1826"/></radialGradient>
             <rect width="600" height="900" fill="url(#m3tbg)"/>
             <g filter="url(#reliefUL)">
-              <text x="300" y="500" text-anchor="end" font-family="Corinthia" font-size="280" fill="url(#champFoil)">R</text>
-              <text x="300" y="500" text-anchor="start" font-family="Corinthia" font-size="280" fill="url(#champFoil)">M</text>
-              <text x="300" y="482" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="120" fill="url(#champFoil)">&amp;</text>
+              <text x="272" y="505" text-anchor="end" font-family="Corinthia" font-size="240" fill="url(#champFoil)">R</text>
+              <text x="328" y="505" text-anchor="start" font-family="Corinthia" font-size="240" fill="url(#champFoil)">M</text>
+              <text x="300" y="480" text-anchor="middle" font-family="EB Garamond" font-style="italic" font-size="110" fill="url(#champFoil)">&amp;</text>
             </g>
           </svg></div>
           <div class="cap">Tag · 2 × 3 in</div>
@@ -579,6 +592,11 @@
     </div>
 
   </section>
+
+  <div class="choose">
+    <div class="lbl">The Decision</div>
+    <p>Pick a colourway — <i>I&#160;Sage</i> · <i>II&#160;Bordeaux</i> · <i>III&#160;Midnight</i> — and the expression you love, and print-ready files follow in the same sizes.</p>
+  </div>
 
 </main>
 
